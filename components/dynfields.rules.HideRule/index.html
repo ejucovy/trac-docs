@@ -1,0 +1,21 @@
+---
+layout: main
+title: dynfields.rules.HideRule
+---
+<h1 class="name">dynfields.rules.HideRule</h1>
+<h2 class="package">In package <a href="packages/TracDynamicFields/index.html">TracDynamicFields</a></h2>
+
+<pre class="doc">Hides a field based on another field's value (or always).
+
+Example trac.ini specs:
+
+  [ticket-custom]
+  version.show_when_type = enhancement
+  milestone.hide_when_type = defect
+  alwayshide.hide_always = True
+  alwayshide.clear_on_hide = False</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/dynfields.rules.IRule/index.html">dynfields.rules.IRule</a></li>
+</ul>

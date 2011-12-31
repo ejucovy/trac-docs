@@ -1,0 +1,36 @@
+---
+layout: main
+title: announcer.api.AnnouncementSystem
+---
+<h1 class="name">announcer.api.AnnouncementSystem</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+
+<pre class="doc">AnnouncementSystem represents the entry-point into the announcement
+system, and is also the central controller that handles passing notices
+around.
+
+An announcement begins when something-- an announcement provider--
+constructs an AnnouncementEvent (or subclass) and calls the send method
+on the AnnouncementSystem.
+
+Every event is classified by two required fields-- realm and category.
+In general, the realm corresponds to the realm of a Resource within Trac;
+ticket, wiki, milestone, and such. This is not a requirement, however.
+Realms can be anything distinctive-- if you specify novel realms to solve
+a particular problem, you'll simply also have to specify subscribers and
+formatters who are able to deal with data in those realms.
+
+The other classifier is a category that is defined by the providers and
+has no particular meaning; for the providers that implement the
+I*ChangeListener interfaces, the categories will often correspond to the
+kinds of events they receive. For tickets, they would be 'created',
+'changed' and 'deleted'.
+
+There is no requirement for an event to have more then realm and category
+to classify an event, but if more is provided in a subclass that the
+subscribers can use to pick through events, all power to you.</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/trac.env.IEnvironmentSetupParticipant/index.html">trac.env.IEnvironmentSetupParticipant</a></li>
+</ul>

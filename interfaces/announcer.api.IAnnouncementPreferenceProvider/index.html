@@ -1,0 +1,30 @@
+---
+layout: main
+title: announcer.api.IAnnouncementPreferenceProvider
+---
+<h1 class="name">announcer.api.IAnnouncementPreferenceProvider</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+<pre class="doc">Represents a single 'box' in the Announcements preference panel.
+
+Any component can always implement IPreferencePanelProvider to get
+preferences from users, of course. However, considering there may be
+several components related to the Announcement system, and many may
+have different preferences for a user to set, that would clutter up
+the preference interfac quite a bit.
+
+The IAnnouncementPreferenceProvider allows several boxes to be
+chained in the same panel to group the preferenecs related to the
+Announcement System.
+
+Implementing announcement preference boxes should be essentially
+identical to implementing entire panels.</pre>
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="components/announcer.opt.acct_mgr.announce.AccountManagerAnnouncement/index.html">announcer.opt.acct_mgr.announce.AccountManagerAnnouncement</a></li>
+  <li><a href="components/announcer.resolvers.SpecifiedEmailResolver/index.html">announcer.resolvers.SpecifiedEmailResolver</a></li>
+  <li><a href="components/announcer.resolvers.SpecifiedXmppResolver/index.html">announcer.resolvers.SpecifiedXmppResolver</a></li>
+  <li><a href="components/announcer.subscribers.TicketComponentSubscriber/index.html">announcer.subscribers.TicketComponentSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.JoinableGroupSubscriber/index.html">announcer.subscribers.JoinableGroupSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.UserChangeSubscriber/index.html">announcer.subscribers.UserChangeSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.GeneralWikiSubscriber/index.html">announcer.subscribers.GeneralWikiSubscriber</a></li>
+</ul>

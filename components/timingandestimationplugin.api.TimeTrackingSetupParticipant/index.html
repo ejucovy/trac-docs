@@ -1,0 +1,30 @@
+---
+layout: main
+title: timingandestimationplugin.api.TimeTrackingSetupParticipant
+---
+<h1 class="name">timingandestimationplugin.api.TimeTrackingSetupParticipant</h1>
+<h2 class="package">In package <a href="packages/timingandestimationplugin/index.html">timingandestimationplugin</a></h2>
+
+<pre class="doc">This is the config that must be there for this plugin to work:
+
+[ticket-custom]
+totalhours = text
+totalhours.value = 0
+totalhours.label = Total Hours
+
+billable = checkbox
+billable.value = 1
+billable.label = Is this billable?
+
+hours = text
+hours.value = 0
+hours.label = Hours to Add
+
+estimatedhours = text
+estimatedhours.value = 0
+estimatedhours.label = Estimated Hours?</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/trac.env.IEnvironmentSetupParticipant/index.html">trac.env.IEnvironmentSetupParticipant</a></li>
+</ul>

@@ -1,0 +1,26 @@
+---
+layout: main
+title: dynfields.rules.SetRule
+---
+<h1 class="name">dynfields.rules.SetRule</h1>
+<h2 class="package">In package <a href="packages/TracDynamicFields/index.html">TracDynamicFields</a></h2>
+
+<pre class="doc">Sets a field based on another field's value.
+
+Example trac.ini specs:
+
+  [ticket-custom]
+  milestone.set_to_!_when_phase = implementation|verifying
+
+The &quot;!&quot; is used only for select fields to specify the first non-empty
+option; a common use case is to auto-select the current milestone.
+By default, the current value if set will not be overwritten.  To
+overwrite the current value, add &quot;(overwrite)&quot; as follows:
+
+  [ticket-custom]
+  milestone.set_to_!_when_phase = (overwrite) implementation|verifying</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/dynfields.rules.IRule/index.html">dynfields.rules.IRule</a></li>
+</ul>

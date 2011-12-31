@@ -1,0 +1,23 @@
+---
+layout: main
+title: announcer.email_decorators.StaticEmailDecorator
+---
+<h1 class="name">announcer.email_decorators.StaticEmailDecorator</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+
+<pre class="doc">The static ticket decorator implements a policy to -always- send an
+email to a certain address.
+
+Controlled via the always_cc and always_bcc option in the announcer section
+of the trac.ini.  If no subscribers are found, then even if always_cc and
+always_bcc addresses are specified, no announcement will be sent.  Since
+these fields are added after announcers subscription system, filters such
+as never_announce and never_notify author won't work with these addresses.
+
+These settings are considered dangerous if you are using the verify email
+or reset password features of the accountmanager plugin.</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/announcer.distributors.mail.IAnnouncementEmailDecorator/index.html">announcer.distributors.mail.IAnnouncementEmailDecorator</a></li>
+</ul>

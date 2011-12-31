@@ -1,0 +1,27 @@
+---
+layout: main
+title: sensitivetickets.sensitivetickets.SensitiveTicketsPolicy
+---
+<h1 class="name">sensitivetickets.sensitivetickets.SensitiveTicketsPolicy</h1>
+<h2 class="package">In package <a href="packages/sensitivetickets/index.html">sensitivetickets</a></h2>
+
+<pre class="doc">Prevent public access to security sensitive tickets.
+
+Add the SENSITIVE_VIEW permission as a pre-requisite for any
+other permission check done on tickets that have been marked (through
+the UI) as &quot;Sensitive&quot;.
+
+Once this plugin is enabled, you'll have to insert it at the appropriate
+place in your list of permission policies, e.g.
+{{{
+[trac]
+permission_policies = SensitiveTicketsPolicy, AuthzPolicy, 
+                      DefaultPermissionPolicy, LegacyAttachmentPolicy
+}}}</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/trac.perm.IPermissionPolicy/index.html">trac.perm.IPermissionPolicy</a></li>
+  <li><a href="interfaces/trac.perm.IPermissionRequestor/index.html">trac.perm.IPermissionRequestor</a></li>
+  <li><a href="interfaces/trac.env.IEnvironmentSetupParticipant/index.html">trac.env.IEnvironmentSetupParticipant</a></li>
+</ul>

@@ -1,0 +1,25 @@
+---
+layout: main
+title: dynfields.rules.IRule
+---
+<h1 class="name">dynfields.rules.IRule</h1>
+<h2 class="package">In package <a href="packages/TracDynamicFields/index.html">TracDynamicFields</a></h2>
+<pre class="doc">An extension point interface for adding rules.  Rule processing
+is split into two parts: (1) rule specification (python), (2) rule
+implementation (JS).
+
+The python and JS parts are linked by instantiating the JS rule
+implementation with the corresponding python rule's class name.
+For example, the JS rule implementation corresponding with the
+HideRule python class must be instantiated as follows in rules.js:
+
+  var hiderule = new Rule('HideRule');</pre>
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="components/dynfields.rules.ClearRule/index.html">dynfields.rules.ClearRule</a></li>
+  <li><a href="components/dynfields.rules.CopyRule/index.html">dynfields.rules.CopyRule</a></li>
+  <li><a href="components/dynfields.rules.DefaultRule/index.html">dynfields.rules.DefaultRule</a></li>
+  <li><a href="components/dynfields.rules.HideRule/index.html">dynfields.rules.HideRule</a></li>
+  <li><a href="components/dynfields.rules.ValidateRule/index.html">dynfields.rules.ValidateRule</a></li>
+  <li><a href="components/dynfields.rules.SetRule/index.html">dynfields.rules.SetRule</a></li>
+</ul>

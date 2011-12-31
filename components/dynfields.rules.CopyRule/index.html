@@ -1,0 +1,27 @@
+---
+layout: main
+title: dynfields.rules.CopyRule
+---
+<h1 class="name">dynfields.rules.CopyRule</h1>
+<h2 class="package">In package <a href="packages/TracDynamicFields/index.html">TracDynamicFields</a></h2>
+
+<pre class="doc">Copies a field (when changed) to another field (if empty and visible).
+
+Example trac.ini specs:
+
+  [ticket-custom]
+  captain.copy_from = owner
+  
+In this example, if the owner value changes, then the captain field's
+value gets set to that value if the captain field is empty and visible
+(the default).  By default, the current value if set will not be
+overwritten.  To overwrite the current value, add &quot;(overwrite)&quot; as
+follows:
+
+  [ticket-custom]
+  captain.copy_from = (overwrite) owner</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/dynfields.rules.IRule/index.html">dynfields.rules.IRule</a></li>
+</ul>

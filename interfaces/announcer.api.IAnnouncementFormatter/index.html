@@ -1,0 +1,27 @@
+---
+layout: main
+title: announcer.api.IAnnouncementFormatter
+---
+<h1 class="name">announcer.api.IAnnouncementFormatter</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+<pre class="doc">Formatters are responsible for converting an event into a message
+appropriate for a given transport.
+
+For transports like 'aim' or 'irc', this may be a short summary of a
+change. For 'email', it may be a plaintext or html overview of all
+the changes and perhaps the existing state.
+
+It's up to a formatter to determine what ends up ultimately being sent
+to the end-user. It's capable of pulling data out of the target object
+that wasn't changed, picking and choosing details for whatever reason.
+
+Since a formatter must be intimately familiar with the realm that
+originated the event, formatters are tied to specific transport + realm
+combinations. This means there may be a proliferation of formatters as
+options expand.</pre>
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="components/announcer.formatters.TicketFormatter/index.html">announcer.formatters.TicketFormatter</a></li>
+  <li><a href="components/announcer.formatters.WikiFormatter/index.html">announcer.formatters.WikiFormatter</a></li>
+  <li><a href="components/announcer.opt.acct_mgr.announce.AccountManagerAnnouncement/index.html">announcer.opt.acct_mgr.announce.AccountManagerAnnouncement</a></li>
+</ul>

@@ -1,0 +1,22 @@
+---
+layout: main
+title: announcer.api.IAnnouncementDefaultSubscriber
+---
+<h1 class="name">announcer.api.IAnnouncementDefaultSubscriber</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+<pre class="doc">Default subscriptions that the module will automatically generate.
+This should only be used in reasonable situations, where users can be
+determined by the event itself.  For instance, ticket author has a
+default subscription that is controlled via trac.ini.  This is because
+we can lookup the ticket author during the event and create a
+subscription for them.  Default subscriptions should be low priority
+so that the user can easily override them.</pre>
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="components/announcer.subscribers.TicketOwnerSubscriber/index.html">announcer.subscribers.TicketOwnerSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.TicketComponentOwnerSubscriber/index.html">announcer.subscribers.TicketComponentOwnerSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.TicketUpdaterSubscriber/index.html">announcer.subscribers.TicketUpdaterSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.TicketReporterSubscriber/index.html">announcer.subscribers.TicketReporterSubscriber</a></li>
+  <li><a href="components/announcer.subscribers.CarbonCopySubscriber/index.html">announcer.subscribers.CarbonCopySubscriber</a></li>
+  <li><a href="components/announcer.subscribers.TicketCustomFieldSubscriber/index.html">announcer.subscribers.TicketCustomFieldSubscriber</a></li>
+</ul>

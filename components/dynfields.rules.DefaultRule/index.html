@@ -1,0 +1,23 @@
+---
+layout: main
+title: dynfields.rules.DefaultRule
+---
+<h1 class="name">dynfields.rules.DefaultRule</h1>
+<h2 class="package">In package <a href="packages/TracDynamicFields/index.html">TracDynamicFields</a></h2>
+
+<pre class="doc">Defaults a field to a user-specified value if empty.
+
+Example trac.ini specs:
+
+  [ticket-custom]
+  cc.default_value = (pref)
+  cc.append = true
+  
+If the field is a non-empty text field and 'append' is true, then the
+field is presumed to be a comma-delimited list and the preference value
+is appended if not already present.</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/dynfields.rules.IRule/index.html">dynfields.rules.IRule</a></li>
+</ul>

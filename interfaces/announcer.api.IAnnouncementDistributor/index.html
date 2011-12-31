@@ -1,0 +1,19 @@
+---
+layout: main
+title: announcer.api.IAnnouncementDistributor
+---
+<h1 class="name">announcer.api.IAnnouncementDistributor</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+<pre class="doc">The Distributor is responsible for actually delivering an event to the
+desired subscriptions.
+
+A distributor should attempt to avoid blocking; using subprocesses is
+preferred to threads.
+
+Each distributor handles a single transport, and only one distributor
+in the system should handle that. For example, there should not be
+two distributors for the 'email' transport.</pre>
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="components/announcer.distributors.mail.EmailDistributor/index.html">announcer.distributors.mail.EmailDistributor</a></li>
+</ul>
