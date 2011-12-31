@@ -16,6 +16,22 @@ title: TracSubTicketsPlugin
 
 <h2>Package Metadata:</h2>
 <pre class="metadata">
-{'entry_points': {'trac.plugins': ['tracsubtickets.api = tracsubtickets.api', 'tracsubtickets.web_ui = tracsubtickets.web_ui'], 'console_scripts': ['check-trac-subtickets = tracsubtickets.checker:main']}, 'description': 'Trac Sub-Tickets Plugin', 'license': 'BSD', 'author': 'Takashi Ito', 'install_requires': ['Trac &gt;= 0.12dev'], 'url': 'http://github.com/itota/trac-subtickets-plugin', 'package_data': {'tracsubtickets': ['htdocs/css/*.css', 'locale/*.*', 'locale/*/LC_MESSAGES/*.*']}, 'version': '0.1.1', 'keywords': 'trac plugin ticket subticket', 'author_email': 'TakashiC.Ito@gmail.com', 'packages': [], 'long_description': '\n    This plugin for Trac 0.12 provides Sub-Tickets functionality.\n\n    The association is done by adding parent tickets number to a custom field.\n    Checks ensure i.e. resolving of sub-tickets before closing the parent.\n    Babel is required to display localized texts.\n    Currently only translation for de_DE is provided.\n    ', 'name': 'TracSubTicketsPlugin'}
+{'author': 'Takashi Ito',
+ 'author_email': 'TakashiC.Ito@gmail.com',
+ 'description': 'Trac Sub-Tickets Plugin',
+ 'entry_points': {'console_scripts': ['check-trac-subtickets = tracsubtickets.checker:main'],
+                  'trac.plugins': ['tracsubtickets.api = tracsubtickets.api',
+                                   'tracsubtickets.web_ui = tracsubtickets.web_ui']},
+ 'install_requires': ['Trac &gt;= 0.12dev'],
+ 'keywords': 'trac plugin ticket subticket',
+ 'license': 'BSD',
+ 'long_description': '\n    This plugin for Trac 0.12 provides Sub-Tickets functionality.\n\n    The association is done by adding parent tickets number to a custom field.\n    Checks ensure i.e. resolving of sub-tickets before closing the parent.\n    Babel is required to display localized texts.\n    Currently only translation for de_DE is provided.\n    ',
+ 'name': 'TracSubTicketsPlugin',
+ 'package_data': {'tracsubtickets': ['htdocs/css/*.css',
+                                     'locale/*.*',
+                                     'locale/*/LC_MESSAGES/*.*']},
+ 'packages': [],
+ 'url': 'http://github.com/itota/trac-subtickets-plugin',
+ 'version': '0.1.1'}
 </pre>
 
