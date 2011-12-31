@@ -3,7 +3,8 @@ layout: main
 title: TracSubTicketsPlugin
 ---
 <h1 class="name">TracSubTicketsPlugin</h1>
-<p><em>No documentation available</em></p>
+<pre class="doc">Trac Sub-Tickets Plugin</pre>
+
 <h2>Interfaces Declared:</h2>
 <ul>
 </ul>
@@ -12,3 +13,9 @@ title: TracSubTicketsPlugin
   <li><a href="components/tracsubtickets.api.SubTicketsSystem/index.html">tracsubtickets.api.SubTicketsSystem</a></li>
   <li><a href="components/tracsubtickets.web_ui.SubTicketsModule/index.html">tracsubtickets.web_ui.SubTicketsModule</a></li>
 </ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'entry_points': {'trac.plugins': ['tracsubtickets.api = tracsubtickets.api', 'tracsubtickets.web_ui = tracsubtickets.web_ui'], 'console_scripts': ['check-trac-subtickets = tracsubtickets.checker:main']}, 'description': 'Trac Sub-Tickets Plugin', 'license': 'BSD', 'author': 'Takashi Ito', 'install_requires': ['Trac &gt;= 0.12dev'], 'url': 'http://github.com/itota/trac-subtickets-plugin', 'package_data': {'tracsubtickets': ['htdocs/css/*.css', 'locale/*.*', 'locale/*/LC_MESSAGES/*.*']}, 'version': '0.1.1', 'keywords': 'trac plugin ticket subticket', 'author_email': 'TakashiC.Ito@gmail.com', 'packages': [], 'long_description': '\n    This plugin for Trac 0.12 provides Sub-Tickets functionality.\n\n    The association is done by adding parent tickets number to a custom field.\n    Checks ensure i.e. resolving of sub-tickets before closing the parent.\n    Babel is required to display localized texts.\n    Currently only translation for de_DE is provided.\n    ', 'name': 'TracSubTicketsPlugin'}
+</pre>
+

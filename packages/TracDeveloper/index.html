@@ -3,7 +3,8 @@ layout: main
 title: TracDeveloper
 ---
 <h1 class="name">TracDeveloper</h1>
-<p><em>No documentation available</em></p>
+<pre class="doc">Adds some features to Trac that are useful for developers</pre>
+
 <h2>Interfaces Declared:</h2>
 <ul>
 </ul>
@@ -17,3 +18,9 @@ title: TracDeveloper
   <li><a href="components/tracdeveloper.log.DeveloperLogModule/index.html">tracdeveloper.log.DeveloperLogModule</a></li>
   <li><a href="components/tracdeveloper.plugins.PluginRegistry/index.html">tracdeveloper.plugins.PluginRegistry</a></li>
 </ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'entry_points': {'trac.plugins': ['developer = tracdeveloper.main', 'developer.apidoc = tracdeveloper.apidoc', 'developer.debugger = tracdeveloper.debugger', 'developer.plugins = tracdeveloper.plugins', 'developer.javascript = tracdeveloper.javascript', 'developer.log = tracdeveloper.log', 'developer.dozer = tracdeveloper.dozer']}, 'description': 'Adds some features to Trac that are useful for developers', 'license': 'BSD', 'author': 'Alec Thomas', 'url': 'http://trac-hacks.org/wiki/TracDeveloperPlugin', 'package_data': {'tracdeveloper': ['htdocs/css/*.css', 'htdocs/js/*.js', 'templates/developer/*.html'], 'tracdeveloper.dozer': ['htdocs/*.css', 'htdocs/*.js', 'templates/*.html']}, 'version': '0.2', 'packages': ['tracdeveloper', 'tracdeveloper.dozer'], 'name': 'TracDeveloper'}
+</pre>
+

@@ -3,7 +3,8 @@ layout: main
 title: TracAnnouncer
 ---
 <h1 class="name">TracAnnouncer</h1>
-<p><em>No documentation available</em></p>
+<pre class="doc">Customizable notification system</pre>
+
 <h2>Interfaces Declared:</h2>
 <ul>
   <li><a href="interfaces/announcer.api.IAnnouncementProducer/index.html">announcer.api.IAnnouncementProducer</a></li>
@@ -57,3 +58,9 @@ title: TracAnnouncer
   <li><a href="components/announcer.subscribers.WatchSubscriber/index.html">announcer.subscribers.WatchSubscriber</a></li>
   <li><a href="components/announcer.subscribers.GeneralWikiSubscriber/index.html">announcer.subscribers.GeneralWikiSubscriber</a></li>
 </ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'entry_points': {'trac.plugins': ['announcer.api = announcer.api', 'announcer.distributors.mail = announcer.distributors.mail', 'announcer.distributors.xmppd = announcer.distributors.xmppd[xmpp]', 'announcer.email_decorators = announcer.email_decorators', 'announcer.filters = announcer.filters', 'announcer.formatters = announcer.formatters', 'announcer.model = announcer.model', 'announcer.pref = announcer.pref', 'announcer.producers = announcer.producers', 'announcer.resolvers = announcer.resolvers', 'announcer.subscribers = announcer.subscribers', 'announcer.util.mail = announcer.util.mail', 'announcer.opt.acct_mgr.announce = announcer.opt.acct_mgr.announce[acct_mgr]', 'announcer.opt.bitten.announce = announcer.opt.bitten.announce[bitten]', 'announcer.opt.fullblog.announce = announcer.opt.fullblog.announce[fullblog]']}, 'extras_require': {'bitten': 'Bitten', 'Trac': 'Trac &gt;= 0.12', 'Babel': 'Babel&gt;= 0.9.5', 'acct_mgr': 'TracAccountManager', 'fullblog': 'TracFullBlogPlugin', 'xmpp': 'xmpppy'}, 'description': 'Customizable notification system', 'license': '\n    Copyright (c) 2008, Stephen Hansen.\n    Copyright (c) 2009, Robert Corsaro.\n    All rights reserved. Released under the 3-clause BSD license.\n    ', 'author': 'Robert Corsaro', 'install_requires': ['Genshi &gt;= 0.5', 'Trac &gt;= 0.11'], 'url': 'http://www.trac-hacks.org/wiki/AnnouncerPlugin', 'package_data': {'announcer': ['htdocs/*.*', 'htdocs/css/*.*', 'locale/*/LC_MESSAGES/*.mo', 'locale/.placeholder', 'templates/*.html', 'templates/*.txt']}, 'version': '0.12.1', 'test_suite': 'announcer.tests', 'author_email': 'rcorsaro@gmail.com', 'packages': [], 'name': 'TracAnnouncer'}
+</pre>
+

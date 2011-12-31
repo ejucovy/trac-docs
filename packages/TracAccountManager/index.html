@@ -3,7 +3,8 @@ layout: main
 title: TracAccountManager
 ---
 <h1 class="name">TracAccountManager</h1>
-<p><em>No documentation available</em></p>
+<pre class="doc">User account management plugin for Trac</pre>
+
 <h2>Interfaces Declared:</h2>
 <ul>
   <li><a href="interfaces/acct_mgr.api.IPasswordStore/index.html">acct_mgr.api.IPasswordStore</a></li>
@@ -27,3 +28,9 @@ title: TracAccountManager
   <li><a href="components/acct_mgr.notification.AccountChangeNotificationAdminPanel/index.html">acct_mgr.notification.AccountChangeNotificationAdminPanel</a></li>
   <li><a href="components/acct_mgr.svnserve.SvnServePasswordStore/index.html">acct_mgr.svnserve.SvnServePasswordStore</a></li>
 </ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'maintainer': 'Steffen Hoffmann', 'description': 'User account management plugin for Trac', 'install_requires': ['Genshi &gt;= 0.5', 'Trac &gt;= 0.11'], 'maintainer_email': 'hoff.st@web.de', 'zip_safe': True, 'packages': ['acct_mgr'], 'test_suite': 'acct_mgr.tests.suite', 'entry_points': {'trac.plugins': ['acct_mgr.admin = acct_mgr.admin', 'acct_mgr.api = acct_mgr.api', 'acct_mgr.db = acct_mgr.db', 'acct_mgr.htfile = acct_mgr.htfile', 'acct_mgr.http = acct_mgr.http', 'acct_mgr.pwhash = acct_mgr.pwhash', 'acct_mgr.svnserve = acct_mgr.svnserve', 'acct_mgr.web_ui = acct_mgr.web_ui', 'acct_mgr.notification = acct_mgr.notification']}, 'extras_require': {'Babel': 'Babel&gt;= 0.9.5', 'Trac': 'Trac &gt;= 0.12'}, 'name': 'TracAccountManager', 'license': 'THE BEER-WARE LICENSE', 'author': 'Matthew Good', 'url': 'http://trac-hacks.org/wiki/AccountManagerPlugin', 'author_email': 'trac@matt-good.net', 'package_data': {'acct_mgr': ['htdocs/*', 'locale/*/LC_MESSAGES/*.mo', 'locale/.placeholder', 'templates/*.html', 'templates/*.txt']}, 'version': '0.4'}
+</pre>
+
