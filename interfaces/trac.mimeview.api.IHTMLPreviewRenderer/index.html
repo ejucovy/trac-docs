@@ -1,0 +1,32 @@
+
+<html><head><base href="http://ejucovy.github.com/trac-docs/"><body>
+<h1 class="name">trac.mimeview.api.IHTMLPreviewRenderer</h1>
+
+<p class="doc">Extension point interface for components that add HTML renderers of
+specific content types to the `Mimeview` component.
+
+.. note::
+
+  This interface will be merged with IContentConverter, as
+  conversion to text/html will simply be a particular content
+  conversion.
+
+  Note however that the IHTMLPreviewRenderer will still be
+  supported for a while through an adapter, whereas the
+  IContentConverter interface itself will be changed.
+
+  So if all you want to do is convert to HTML and don't feel like
+  following the API changes, you should rather implement this
+  interface for the time being.</p>
+
+<h2>Implemented by:</h2>
+<ul>
+  <li><a href="/components/trac.mimeview.api.PlainTextRenderer/index.html">trac.mimeview.api.PlainTextRenderer</a></li>
+  <li><a href="/components/trac.mimeview.api.ImageRenderer/index.html">trac.mimeview.api.ImageRenderer</a></li>
+  <li><a href="/components/trac.mimeview.api.WikiTextRenderer/index.html">trac.mimeview.api.WikiTextRenderer</a></li>
+  <li><a href="/components/trac.mimeview.patch.PatchRenderer/index.html">trac.mimeview.patch.PatchRenderer</a></li>
+  <li><a href="/components/trac.mimeview.pygments.PygmentsRenderer/index.html">trac.mimeview.pygments.PygmentsRenderer</a></li>
+  <li><a href="/components/tracopt.mimeview.enscript.EnscriptRenderer/index.html">tracopt.mimeview.enscript.EnscriptRenderer</a></li>
+  <li><a href="/components/tracopt.mimeview.php.PHPRenderer/index.html">tracopt.mimeview.php.PHPRenderer</a></li>
+</ul>
+</body></html>
