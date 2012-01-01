@@ -25,7 +25,20 @@ AccountManager module must be set in trac.ini in order to use this.</pre>
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">account-manager/generated_password_length</a></li>
-  <li><a href="">account-manager/reset_password</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>account-manager</td>
+    <td>generated_password_length</td>
+    <td>IntOption</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>reset_password</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+</table>

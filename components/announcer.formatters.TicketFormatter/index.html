@@ -17,7 +17,20 @@ title: announcer.formatters.TicketFormatter
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">announcer/ticket_email_header_fields</a></li>
-  <li><a href="">announcer/ticket_link_with_comment</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>announcer</td>
+    <td>ticket_email_header_fields</td>
+    <td>ListOption</td>
+    <td>owner, reporter, milestone, priority, severity</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>ticket_link_with_comment</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

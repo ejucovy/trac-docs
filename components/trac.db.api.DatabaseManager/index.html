@@ -17,9 +17,32 @@ title: trac.db.api.DatabaseManager
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">trac/backup_dir</a></li>
-  <li><a href="">trac/database</a></li>
-  <li><a href="">trac/debug_sql</a></li>
-  <li><a href="">trac/timeout</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>trac</td>
+    <td>backup_dir</td>
+    <td>Option</td>
+    <td>db</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>database</td>
+    <td>Option</td>
+    <td>sqlite:db/trac.db</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>debug_sql</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>timeout</td>
+    <td>IntOption</td>
+    <td>20</td>
+  </tr>
+</table>

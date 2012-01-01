@@ -18,7 +18,21 @@ title: tracext.changesetnotifier.api.ChangesetNotifier
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">changeset/notify_changesets</a></li>
-  <li><a href="">changeset/notification_recipients</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>changeset</td>
+    <td>notify_changesets</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>changeset</td>
+    <td>notification_recipients</td>
+    <td>Option</td>
+    <td>Sets the changeset notification recipients.
+                        The default notification CC option is also applied.</td>
+  </tr>
+</table>

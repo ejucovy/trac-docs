@@ -21,8 +21,26 @@ title: tracpaste.web_ui.TracpastePlugin
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">pastebin/enable_other_formats</a></li>
-  <li><a href="">pastebin/filter_other_formats</a></li>
-  <li><a href="">pastebin/max_recent</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>pastebin</td>
+    <td>enable_other_formats</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>pastebin</td>
+    <td>filter_other_formats</td>
+    <td>ListOption</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>pastebin</td>
+    <td>max_recent</td>
+    <td>IntOption</td>
+    <td>10</td>
+  </tr>
+</table>

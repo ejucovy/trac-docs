@@ -23,9 +23,32 @@ reasonable protection against attempted brute-force attacks. </pre>
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">account-manager/login_attempt_max_count</a></li>
-  <li><a href="">account-manager/user_lock_max_time</a></li>
-  <li><a href="">account-manager/user_lock_time</a></li>
-  <li><a href="">account-manager/user_lock_time_progression</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>account-manager</td>
+    <td>login_attempt_max_count</td>
+    <td>IntOption</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>user_lock_max_time</td>
+    <td>IntOption</td>
+    <td>86400</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>user_lock_time</td>
+    <td>IntOption</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>user_lock_time_progression</td>
+    <td>Option</td>
+    <td>1</td>
+  </tr>
+</table>

@@ -18,14 +18,62 @@ title: tracext.git.git_fs.GitConnector
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">git/cached_repository</a></li>
-  <li><a href="">git/git_bin</a></li>
-  <li><a href="">git/git_fs_encoding</a></li>
-  <li><a href="">git/persistent_cache</a></li>
-  <li><a href="">git/shortrev_len</a></li>
-  <li><a href="">git/trac_user_rlookup</a></li>
-  <li><a href="">git/use_committer_id</a></li>
-  <li><a href="">git/use_committer_time</a></li>
-  <li><a href="">git/wiki_shortrev_len</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>git</td>
+    <td>cached_repository</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>git_bin</td>
+    <td>PathOption</td>
+    <td>/usr/bin/git</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>git_fs_encoding</td>
+    <td>Option</td>
+    <td>utf-8</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>persistent_cache</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>shortrev_len</td>
+    <td>IntOption</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>trac_user_rlookup</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>use_committer_id</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>use_committer_time</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>git</td>
+    <td>wiki_shortrev_len</td>
+    <td>IntOption</td>
+    <td>40</td>
+  </tr>
+</table>

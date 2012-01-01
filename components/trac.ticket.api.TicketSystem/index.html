@@ -22,19 +22,92 @@ title: trac.ticket.api.TicketSystem
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">ticket/workflow</a></li>
-  <li><a href="">ticket/default_cc</a></li>
-  <li><a href="">ticket/default_component</a></li>
-  <li><a href="">ticket/default_description</a></li>
-  <li><a href="">ticket/default_keywords</a></li>
-  <li><a href="">ticket/default_milestone</a></li>
-  <li><a href="">ticket/default_owner</a></li>
-  <li><a href="">ticket/default_priority</a></li>
-  <li><a href="">ticket/default_resolution</a></li>
-  <li><a href="">ticket/default_severity</a></li>
-  <li><a href="">ticket/default_summary</a></li>
-  <li><a href="">ticket/default_type</a></li>
-  <li><a href="">ticket/default_version</a></li>
-  <li><a href="">ticket/restrict_owner</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>ticket</td>
+    <td>workflow</td>
+    <td>OrderedExtensionsOption</td>
+    <td>ConfigurableTicketWorkflow</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_cc</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_component</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_description</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_keywords</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_milestone</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_owner</td>
+    <td>Option</td>
+    <td>&lt; default &gt;</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_priority</td>
+    <td>Option</td>
+    <td>major</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_resolution</td>
+    <td>Option</td>
+    <td>fixed</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_severity</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_summary</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_type</td>
+    <td>Option</td>
+    <td>defect</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>default_version</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>restrict_owner</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

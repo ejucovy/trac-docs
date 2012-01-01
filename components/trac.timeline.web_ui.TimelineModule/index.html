@@ -23,8 +23,26 @@ title: trac.timeline.web_ui.TimelineModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">timeline/abbreviated_messages</a></li>
-  <li><a href="">timeline/default_daysback</a></li>
-  <li><a href="">timeline/max_daysback</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>timeline</td>
+    <td>abbreviated_messages</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>default_daysback</td>
+    <td>IntOption</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>max_daysback</td>
+    <td>IntOption</td>
+    <td>90</td>
+  </tr>
+</table>

@@ -19,9 +19,32 @@ title: trac.mimeview.api.Mimeview
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">trac/default_charset</a></li>
-  <li><a href="">mimeviewer/max_preview_size</a></li>
-  <li><a href="">mimeviewer/tab_width</a></li>
-  <li><a href="">mimeviewer/treat_as_binary</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>trac</td>
+    <td>default_charset</td>
+    <td>Option</td>
+    <td>utf-8</td>
+  </tr>
+  <tr>
+    <td>mimeviewer</td>
+    <td>max_preview_size</td>
+    <td>IntOption</td>
+    <td>262144</td>
+  </tr>
+  <tr>
+    <td>mimeviewer</td>
+    <td>tab_width</td>
+    <td>IntOption</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>mimeviewer</td>
+    <td>treat_as_binary</td>
+    <td>ListOption</td>
+    <td>application/octet-stream, application/pdf, application/postscript, application/msword,application/rtf,</td>
+  </tr>
+</table>

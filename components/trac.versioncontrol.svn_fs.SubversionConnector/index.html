@@ -18,7 +18,20 @@ title: trac.versioncontrol.svn_fs.SubversionConnector
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">svn/branches</a></li>
-  <li><a href="">svn/tags</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>svn</td>
+    <td>branches</td>
+    <td>ListOption</td>
+    <td>trunk, branches/*</td>
+  </tr>
+  <tr>
+    <td>svn</td>
+    <td>tags</td>
+    <td>ListOption</td>
+    <td>tags/*</td>
+  </tr>
+</table>

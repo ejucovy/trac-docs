@@ -17,13 +17,56 @@ title: announcer.distributors.mail.SmtpEmailSender
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">smtp/debuglevel</a></li>
-  <li><a href="">smtp/password</a></li>
-  <li><a href="">smtp/port</a></li>
-  <li><a href="">smtp/server</a></li>
-  <li><a href="">smtp/timeout</a></li>
-  <li><a href="">smtp/use_ssl</a></li>
-  <li><a href="">smtp/use_tls</a></li>
-  <li><a href="">smtp/user</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>smtp</td>
+    <td>debuglevel</td>
+    <td>IntOption</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>password</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>port</td>
+    <td>IntOption</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>server</td>
+    <td>Option</td>
+    <td>localhost</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>timeout</td>
+    <td>IntOption</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>use_ssl</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>use_tls</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>smtp</td>
+    <td>user</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+</table>

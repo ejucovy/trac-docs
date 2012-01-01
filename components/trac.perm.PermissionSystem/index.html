@@ -20,7 +20,20 @@ title: trac.perm.PermissionSystem
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">trac/permission_policies</a></li>
-  <li><a href="">trac/permission_store</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>trac</td>
+    <td>permission_policies</td>
+    <td>OrderedExtensionsOption</td>
+    <td>DefaultPermissionPolicy, LegacyAttachmentPolicy</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>permission_store</td>
+    <td>ExtensionOption</td>
+    <td>DefaultPermissionStore</td>
+  </tr>
+</table>

@@ -20,8 +20,26 @@ title: batchmod.web_ui.BatchModifyModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">batchmod/fields_as_list</a></li>
-  <li><a href="">batchmod/list_connector_string</a></li>
-  <li><a href="">batchmod/list_separator_regex</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>batchmod</td>
+    <td>fields_as_list</td>
+    <td>ListOption</td>
+    <td>keywords</td>
+  </tr>
+  <tr>
+    <td>batchmod</td>
+    <td>list_connector_string</td>
+    <td>Option</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>batchmod</td>
+    <td>list_separator_regex</td>
+    <td>Option</td>
+    <td>[,\s]+</td>
+  </tr>
+</table>

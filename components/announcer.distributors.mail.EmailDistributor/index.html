@@ -21,23 +21,116 @@ title: announcer.distributors.mail.EmailDistributor
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">announcer/email_crypto</a></li>
-  <li><a href="">announcer/default_email_format</a></li>
-  <li><a href="">announcer/email_from</a></li>
-  <li><a href="">announcer/email_sender</a></li>
-  <li><a href="">announcer/email_enabled</a></li>
-  <li><a href="">announcer/email_from_name</a></li>
-  <li><a href="">announcer/gpg_binary</a></li>
-  <li><a href="">announcer/gpg_home</a></li>
-  <li><a href="">announcer/mime_encoding</a></li>
-  <li><a href="">announcer/gpg_signing_key</a></li>
-  <li><a href="">announcer/rcpt_allow_regexp</a></li>
-  <li><a href="">announcer/rcpt_local_regexp</a></li>
-  <li><a href="">announcer/email_replyto</a></li>
-  <li><a href="">announcer/email_address_resolvers</a></li>
-  <li><a href="">announcer/email_subject_prefix</a></li>
-  <li><a href="">announcer/email_to</a></li>
-  <li><a href="">announcer/use_public_cc</a></li>
-  <li><a href="">announcer/use_threaded_delivery</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>announcer</td>
+    <td>email_crypto</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>default_email_format</td>
+    <td>Option</td>
+    <td>text/plain</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_from</td>
+    <td>Option</td>
+    <td>trac@localhost</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_sender</td>
+    <td>ExtensionOption</td>
+    <td>SmtpEmailSender</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_enabled</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_from_name</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>gpg_binary</td>
+    <td>Option</td>
+    <td>gpg</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>gpg_home</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>mime_encoding</td>
+    <td>Option</td>
+    <td>base64</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>gpg_signing_key</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>rcpt_allow_regexp</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>rcpt_local_regexp</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_replyto</td>
+    <td>Option</td>
+    <td>trac@localhost</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_address_resolvers</td>
+    <td>OrderedExtensionsOption</td>
+    <td>SpecifiedEmailResolver, SessionEmailResolver, DefaultDomainEmailResolver</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_subject_prefix</td>
+    <td>Option</td>
+    <td>__default__</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>email_to</td>
+    <td>Option</td>
+    <td>undisclosed-recipients: ;</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>use_public_cc</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>announcer</td>
+    <td>use_threaded_delivery</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

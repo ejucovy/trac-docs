@@ -28,13 +28,56 @@ stores.  If it is a list, then each password store is queried in turn.</pre>
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">account-manager/password_format</a></li>
-  <li><a href="">account-manager/password_store</a></li>
-  <li><a href="">account-manager/allow_delete_account</a></li>
-  <li><a href="">account-manager/force_passwd_change</a></li>
-  <li><a href="">account-manager/persistent_sessions</a></li>
-  <li><a href="">account-manager/refresh_passwd</a></li>
-  <li><a href="">account-manager/username_char_blacklist</a></li>
-  <li><a href="">account-manager/verify_email</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>account-manager</td>
+    <td>password_format</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>password_store</td>
+    <td>OrderedExtensionsOption</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>allow_delete_account</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>force_passwd_change</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>persistent_sessions</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>refresh_passwd</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>username_char_blacklist</td>
+    <td>Option</td>
+    <td>:[]</td>
+  </tr>
+  <tr>
+    <td>account-manager</td>
+    <td>verify_email</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+</table>

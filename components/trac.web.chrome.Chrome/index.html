@@ -26,25 +26,128 @@ Chrome is everything that is not actual page content.</pre>
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">trac/auto_preview_timeout</a></li>
-  <li><a href="">trac/auto_reload</a></li>
-  <li><a href="">trac/default_dateinfo_format</a></li>
-  <li><a href="">trac/fingerprint_resources</a></li>
-  <li><a href="">trac/genshi_cache_size</a></li>
-  <li><a href="">trac/htdocs_location</a></li>
-  <li><a href="">trac/jquery_location</a></li>
-  <li><a href="">header_logo/alt</a></li>
-  <li><a href="">header_logo/height</a></li>
-  <li><a href="">header_logo/link</a></li>
-  <li><a href="">header_logo/src</a></li>
-  <li><a href="">header_logo/width</a></li>
-  <li><a href="">trac/mainnav</a></li>
-  <li><a href="">trac/metanav</a></li>
-  <li><a href="">trac/never_obfuscate_mailto</a></li>
-  <li><a href="">trac/resizable_textareas</a></li>
-  <li><a href="">inherit/htdocs_dir</a></li>
-  <li><a href="">inherit/templates_dir</a></li>
-  <li><a href="">trac/show_email_addresses</a></li>
-  <li><a href="">trac/show_ip_addresses</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>trac</td>
+    <td>auto_preview_timeout</td>
+    <td>FloatOption</td>
+    <td>2.0</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>auto_reload</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>default_dateinfo_format</td>
+    <td>Option</td>
+    <td>relative</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>fingerprint_resources</td>
+    <td>ChoiceOption</td>
+    <td>content</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>genshi_cache_size</td>
+    <td>IntOption</td>
+    <td>128</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>htdocs_location</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>jquery_location</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>header_logo</td>
+    <td>alt</td>
+    <td>Option</td>
+    <td>(please configure the [header_logo] section in trac.ini)</td>
+  </tr>
+  <tr>
+    <td>header_logo</td>
+    <td>height</td>
+    <td>IntOption</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>header_logo</td>
+    <td>link</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>header_logo</td>
+    <td>src</td>
+    <td>Option</td>
+    <td>site/your_project_logo.png</td>
+  </tr>
+  <tr>
+    <td>header_logo</td>
+    <td>width</td>
+    <td>IntOption</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>mainnav</td>
+    <td>ListOption</td>
+    <td>wiki, timeline, roadmap, browser, tickets, newticket, search</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>metanav</td>
+    <td>ListOption</td>
+    <td>login, logout, prefs, help, about</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>never_obfuscate_mailto</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>resizable_textareas</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>inherit</td>
+    <td>htdocs_dir</td>
+    <td>PathOption</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>inherit</td>
+    <td>templates_dir</td>
+    <td>PathOption</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>show_email_addresses</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>show_ip_addresses</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

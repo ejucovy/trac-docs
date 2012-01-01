@@ -23,11 +23,44 @@ title: trac.ticket.web_ui.TicketModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">ticket/max_comment_size</a></li>
-  <li><a href="">ticket/max_description_size</a></li>
-  <li><a href="">ticket/preserve_newlines</a></li>
-  <li><a href="">query/ticketlink_query</a></li>
-  <li><a href="">timeline/ticket_show_details</a></li>
-  <li><a href="">timeline/newticket_formatter</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>ticket</td>
+    <td>max_comment_size</td>
+    <td>IntOption</td>
+    <td>262144</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>max_description_size</td>
+    <td>IntOption</td>
+    <td>262144</td>
+  </tr>
+  <tr>
+    <td>ticket</td>
+    <td>preserve_newlines</td>
+    <td>Option</td>
+    <td>default</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>ticketlink_query</td>
+    <td>Option</td>
+    <td>?status=!closed</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>ticket_show_details</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>newticket_formatter</td>
+    <td>Option</td>
+    <td>oneliner</td>
+  </tr>
+</table>

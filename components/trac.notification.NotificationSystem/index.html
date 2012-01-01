@@ -17,20 +17,98 @@ title: trac.notification.NotificationSystem
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">notification/admit_domains</a></li>
-  <li><a href="">notification/email_sender</a></li>
-  <li><a href="">notification/ignore_domains</a></li>
-  <li><a href="">notification/mime_encoding</a></li>
-  <li><a href="">notification/smtp_always_bcc</a></li>
-  <li><a href="">notification/smtp_always_cc</a></li>
-  <li><a href="">notification/smtp_default_domain</a></li>
-  <li><a href="">notification/smtp_enabled</a></li>
-  <li><a href="">notification/smtp_from</a></li>
-  <li><a href="">notification/smtp_from_author</a></li>
-  <li><a href="">notification/smtp_from_name</a></li>
-  <li><a href="">notification/smtp_replyto</a></li>
-  <li><a href="">notification/smtp_subject_prefix</a></li>
-  <li><a href="">notification/use_public_cc</a></li>
-  <li><a href="">notification/use_short_addr</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>notification</td>
+    <td>admit_domains</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>email_sender</td>
+    <td>ExtensionOption</td>
+    <td>SmtpEmailSender</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>ignore_domains</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>mime_encoding</td>
+    <td>Option</td>
+    <td>none</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_always_bcc</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_always_cc</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_default_domain</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_enabled</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_from</td>
+    <td>Option</td>
+    <td>trac@localhost</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_from_author</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_from_name</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_replyto</td>
+    <td>Option</td>
+    <td>trac@localhost</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_subject_prefix</td>
+    <td>Option</td>
+    <td>__default__</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>use_public_cc</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>use_short_addr</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

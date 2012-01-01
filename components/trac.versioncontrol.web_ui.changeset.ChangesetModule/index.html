@@ -35,11 +35,44 @@ In that case, there's no changeset information displayed.</pre>
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">changeset/max_diff_bytes</a></li>
-  <li><a href="">changeset/max_diff_files</a></li>
-  <li><a href="">timeline/changeset_collapse_events</a></li>
-  <li><a href="">timeline/changeset_long_messages</a></li>
-  <li><a href="">timeline/changeset_show_files</a></li>
-  <li><a href="">changeset/wiki_format_messages</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>changeset</td>
+    <td>max_diff_bytes</td>
+    <td>IntOption</td>
+    <td>10000000</td>
+  </tr>
+  <tr>
+    <td>changeset</td>
+    <td>max_diff_files</td>
+    <td>IntOption</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>changeset_collapse_events</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>changeset_long_messages</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>timeline</td>
+    <td>changeset_show_files</td>
+    <td>Option</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>changeset</td>
+    <td>wiki_format_messages</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+</table>

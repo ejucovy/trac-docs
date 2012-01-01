@@ -21,9 +21,32 @@ title: trac.wiki.api.WikiSystem
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">wiki/ignore_missing_pages</a></li>
-  <li><a href="">wiki/render_unsafe_content</a></li>
-  <li><a href="">wiki/safe_schemes</a></li>
-  <li><a href="">wiki/split_page_names</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>wiki</td>
+    <td>ignore_missing_pages</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>wiki</td>
+    <td>render_unsafe_content</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>wiki</td>
+    <td>safe_schemes</td>
+    <td>ListOption</td>
+    <td>cvs, file, ftp, git, irc, http, https, news, sftp, smb, ssh, svn, svn+ssh</td>
+  </tr>
+  <tr>
+    <td>wiki</td>
+    <td>split_page_names</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

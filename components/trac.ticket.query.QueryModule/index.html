@@ -20,8 +20,26 @@ title: trac.ticket.query.QueryModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">query/default_anonymous_query</a></li>
-  <li><a href="">query/default_query</a></li>
-  <li><a href="">query/items_per_page</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>query</td>
+    <td>default_anonymous_query</td>
+    <td>Option</td>
+    <td>status!=closed&amp;cc~=$USER</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>default_query</td>
+    <td>Option</td>
+    <td>status!=closed&amp;owner=$USER</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>items_per_page</td>
+    <td>IntOption</td>
+    <td>100</td>
+  </tr>
+</table>

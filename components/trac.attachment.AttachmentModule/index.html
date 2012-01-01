@@ -23,8 +23,26 @@ title: trac.attachment.AttachmentModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">attachment/max_size</a></li>
-  <li><a href="">attachment/max_zip_size</a></li>
-  <li><a href="">attachment/render_unsafe_content</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>attachment</td>
+    <td>max_size</td>
+    <td>IntOption</td>
+    <td>262144</td>
+  </tr>
+  <tr>
+    <td>attachment</td>
+    <td>max_zip_size</td>
+    <td>IntOption</td>
+    <td>2097152</td>
+  </tr>
+  <tr>
+    <td>attachment</td>
+    <td>render_unsafe_content</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

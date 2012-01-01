@@ -16,10 +16,38 @@ title: trac.ticket.notification.TicketNotificationSystem
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">notification/always_notify_owner</a></li>
-  <li><a href="">notification/always_notify_reporter</a></li>
-  <li><a href="">notification/always_notify_updater</a></li>
-  <li><a href="">notification/ambiguous_char_width</a></li>
-  <li><a href="">notification/ticket_subject_template</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>notification</td>
+    <td>always_notify_owner</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>always_notify_reporter</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>always_notify_updater</td>
+    <td>BoolOption</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>ambiguous_char_width</td>
+    <td>Option</td>
+    <td>single</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>ticket_subject_template</td>
+    <td>Option</td>
+    <td>$prefix #$ticket.id: $summary</td>
+  </tr>
+</table>

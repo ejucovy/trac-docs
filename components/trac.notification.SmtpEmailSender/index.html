@@ -17,10 +17,38 @@ title: trac.notification.SmtpEmailSender
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">notification/smtp_password</a></li>
-  <li><a href="">notification/smtp_port</a></li>
-  <li><a href="">notification/smtp_server</a></li>
-  <li><a href="">notification/smtp_user</a></li>
-  <li><a href="">notification/use_tls</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>notification</td>
+    <td>smtp_password</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_port</td>
+    <td>IntOption</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_server</td>
+    <td>Option</td>
+    <td>localhost</td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>smtp_user</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>notification</td>
+    <td>use_tls</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

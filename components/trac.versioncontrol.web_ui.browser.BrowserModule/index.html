@@ -23,13 +23,56 @@ title: trac.versioncontrol.web_ui.browser.BrowserModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">browser/color_scale</a></li>
-  <li><a href="">browser/downloadable_paths</a></li>
-  <li><a href="">browser/hide_properties</a></li>
-  <li><a href="">browser/intermediate_color</a></li>
-  <li><a href="">browser/intermediate_point</a></li>
-  <li><a href="">browser/newest_color</a></li>
-  <li><a href="">browser/oldest_color</a></li>
-  <li><a href="">browser/render_unsafe_content</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>browser</td>
+    <td>color_scale</td>
+    <td>BoolOption</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>downloadable_paths</td>
+    <td>ListOption</td>
+    <td>/trunk, /branches/*, /tags/*</td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>hide_properties</td>
+    <td>ListOption</td>
+    <td>svk:merge</td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>intermediate_color</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>intermediate_point</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>newest_color</td>
+    <td>Option</td>
+    <td>(255, 136, 136)</td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>oldest_color</td>
+    <td>Option</td>
+    <td>(136, 136, 255)</td>
+  </tr>
+  <tr>
+    <td>browser</td>
+    <td>render_unsafe_content</td>
+    <td>BoolOption</td>
+    <td>false</td>
+  </tr>
+</table>

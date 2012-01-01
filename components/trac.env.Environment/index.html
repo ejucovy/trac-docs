@@ -27,20 +27,98 @@ of a directory structure containing among other things:
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">trac/base_url</a></li>
-  <li><a href="">trac/use_base_url_for_redirect</a></li>
-  <li><a href="">logging/log_file</a></li>
-  <li><a href="">logging/log_format</a></li>
-  <li><a href="">logging/log_level</a></li>
-  <li><a href="">logging/log_type</a></li>
-  <li><a href="">project/admin</a></li>
-  <li><a href="">project/admin_trac_url</a></li>
-  <li><a href="">project/descr</a></li>
-  <li><a href="">project/footer</a></li>
-  <li><a href="">project/icon</a></li>
-  <li><a href="">project/name</a></li>
-  <li><a href="">project/url</a></li>
-  <li><a href="">trac/secure_cookies</a></li>
-  <li><a href="">inherit/plugins_dir</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>trac</td>
+    <td>base_url</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>use_base_url_for_redirect</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>logging</td>
+    <td>log_file</td>
+    <td>Option</td>
+    <td>trac.log</td>
+  </tr>
+  <tr>
+    <td>logging</td>
+    <td>log_format</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>logging</td>
+    <td>log_level</td>
+    <td>Option</td>
+    <td>DEBUG</td>
+  </tr>
+  <tr>
+    <td>logging</td>
+    <td>log_type</td>
+    <td>Option</td>
+    <td>none</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>admin</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>admin_trac_url</td>
+    <td>Option</td>
+    <td>.</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>descr</td>
+    <td>Option</td>
+    <td>My example project</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>footer</td>
+    <td>Option</td>
+    <td>Visit the Trac open source project at&lt;br /&gt;&lt;a href=&quot;http://trac.edgewall.org/&quot;&gt;http://trac.edgewall.org/&lt;/a&gt;</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>icon</td>
+    <td>Option</td>
+    <td>common/trac.ico</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>name</td>
+    <td>Option</td>
+    <td>My Project</td>
+  </tr>
+  <tr>
+    <td>project</td>
+    <td>url</td>
+    <td>Option</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>trac</td>
+    <td>secure_cookies</td>
+    <td>BoolOption</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>inherit</td>
+    <td>plugins_dir</td>
+    <td>PathOption</td>
+    <td></td>
+  </tr>
+</table>

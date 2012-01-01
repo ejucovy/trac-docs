@@ -20,7 +20,20 @@ title: trac.versioncontrol.web_ui.log.LogModule
 </ul>
 
 <h2>Options:</h2>
-<ul>
-  <li><a href="">revisionlog/default_log_limit</a></li>
-  <li><a href="">revisionlog/graph_colors</a></li>
-</ul>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+  <tr>
+    <td>revisionlog</td>
+    <td>default_log_limit</td>
+    <td>IntOption</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>revisionlog</td>
+    <td>graph_colors</td>
+    <td>ListOption</td>
+    <td>['#cc0', '#0c0', '#0cc', '#00c', '#c0c', '#c00']</td>
+  </tr>
+</table>
