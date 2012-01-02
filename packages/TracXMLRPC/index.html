@@ -1,0 +1,53 @@
+---
+layout: main
+title: TracXMLRPC
+---
+<h1 class="name">TracXMLRPC</h1>
+<pre class="doc">RPC interface to Trac</pre>
+
+<h2>Interfaces Declared:</h2>
+<ul>
+  <li><a href="interfaces/tracrpc.api.IRPCProtocol/index.html">tracrpc.api.IRPCProtocol</a></li>
+  <li><a href="interfaces/tracrpc.api.IXMLRPCHandler/index.html">tracrpc.api.IXMLRPCHandler</a></li>
+</ul>
+<h2>Components Provided:</h2>
+<ul>
+  <li><a href="components/tracrpc.api.AbstractRPCHandler/index.html">tracrpc.api.AbstractRPCHandler</a></li>
+  <li><a href="components/tracrpc.api.XMLRPCSystem/index.html">tracrpc.api.XMLRPCSystem</a></li>
+  <li><a href="components/tracrpc.json_rpc.JsonRpcProtocol/index.html">tracrpc.json_rpc.JsonRpcProtocol</a></li>
+  <li><a href="components/tracrpc.xml_rpc.XmlRpcProtocol/index.html">tracrpc.xml_rpc.XmlRpcProtocol</a></li>
+  <li><a href="components/tracrpc.web_ui.RPCWeb/index.html">tracrpc.web_ui.RPCWeb</a></li>
+  <li><a href="components/tracrpc.ticket.TicketRPC/index.html">tracrpc.ticket.TicketRPC</a></li>
+  <li><a href="components/tracrpc.ticket.StatusRPC/index.html">tracrpc.ticket.StatusRPC</a></li>
+  <li><a href="components/tracrpc.ticket.ComponentRPC/index.html">tracrpc.ticket.ComponentRPC</a></li>
+  <li><a href="components/tracrpc.ticket.VersionRPC/index.html">tracrpc.ticket.VersionRPC</a></li>
+  <li><a href="components/tracrpc.ticket.MilestoneRPC/index.html">tracrpc.ticket.MilestoneRPC</a></li>
+  <li><a href="components/tracrpc.ticket.TypeRPC/index.html">tracrpc.ticket.TypeRPC</a></li>
+  <li><a href="components/tracrpc.ticket.ResolutionRPC/index.html">tracrpc.ticket.ResolutionRPC</a></li>
+  <li><a href="components/tracrpc.ticket.PriorityRPC/index.html">tracrpc.ticket.PriorityRPC</a></li>
+  <li><a href="components/tracrpc.ticket.SeverityRPC/index.html">tracrpc.ticket.SeverityRPC</a></li>
+  <li><a href="components/tracrpc.wiki.WikiRPC/index.html">tracrpc.wiki.WikiRPC</a></li>
+  <li><a href="components/tracrpc.search.SearchRPC/index.html">tracrpc.search.SearchRPC</a></li>
+</ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'author': 'Alec Thomas',
+ 'author_email': 'alec@swapoff.org',
+ 'description': 'RPC interface to Trac',
+ 'entry_points': {'trac.plugins': 'TracXMLRPC = tracrpc'},
+ 'license': 'BSD',
+ 'maintainer': 'Odd Simon Simonsen',
+ 'maintainer_email': 'simon-code@bvnetwork.no',
+ 'name': 'TracXMLRPC',
+ 'package_data': {'tracrpc': ['templates/*.html',
+                              'htdocs/*.js',
+                              'htdocs/*.css']},
+ 'packages': ['tracrpc'],
+ 'test_suite': 'tracrpc.tests.test_suite',
+ 'tests_require': ['twill'],
+ 'url': 'http://trac-hacks.org/wiki/XmlRpcPlugin',
+ 'version': '1.1.2',
+ 'zip_safe': True}
+</pre>
+

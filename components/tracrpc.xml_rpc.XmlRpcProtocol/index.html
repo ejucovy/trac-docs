@@ -1,0 +1,53 @@
+---
+layout: main
+title: tracrpc.xml_rpc.XmlRpcProtocol
+---
+<h1 class="name">tracrpc.xml_rpc.XmlRpcProtocol</h1>
+<h2 class="package">In package <a href="packages/TracXMLRPC/index.html">TracXMLRPC</a></h2>
+
+<pre class="doc">There should be XML-RPC client implementations available for all
+popular programming languages.
+Example call using `curl`:
+
+{{{
+user: ~ &gt; cat body.xml
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;methodCall&gt;
+&lt;methodName&gt;wiki.getPage&lt;/methodName&gt;
+&lt;params&gt;
+&lt;param&gt;&lt;string&gt;WikiStart&lt;/string&gt;&lt;/param&gt;
+&lt;/params&gt;
+&lt;/methodCall&gt;
+
+user: ~ &gt; curl -H &quot;Content-Type: application/xml&quot; --data @body.xml ${req.abs_href.rpc()}
+&lt;?xml version='1.0'?&gt;
+&lt;methodResponse&gt;
+&lt;params&gt;
+&lt;param&gt;
+&lt;value&gt;&lt;string&gt;= Welcome to....
+}}}
+
+The following snippet illustrates how to perform authenticated calls in Python.
+
+{{{
+&gt;&gt;&gt; from xmlrpclib import ServerProxy
+&gt;&gt;&gt; p = ServerProxy('${req.abs_href.login('rpc').replace('://', '://%s:your_password@' % authname)}')
+&gt;&gt;&gt; p.system.getAPIVersion()
+[${', '.join(rpc.version.split('.'))}]
+}}}</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/tracrpc.api.IRPCProtocol/index.html">tracrpc.api.IRPCProtocol</a></li>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+</table>

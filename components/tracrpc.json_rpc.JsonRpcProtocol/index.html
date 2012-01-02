@@ -1,0 +1,41 @@
+---
+layout: main
+title: tracrpc.json_rpc.JsonRpcProtocol
+---
+<h1 class="name">tracrpc.json_rpc.JsonRpcProtocol</h1>
+<h2 class="package">In package <a href="packages/TracXMLRPC/index.html">TracXMLRPC</a></h2>
+
+<pre class="doc">Example `POST` request using `curl` with `Content-Type` header
+and body:
+
+{{{
+user: ~ &gt; cat body.json
+{&quot;params&quot;: [&quot;WikiStart&quot;], &quot;method&quot;: &quot;wiki.getPage&quot;, &quot;id&quot;: 123}
+user: ~ &gt; curl -H &quot;Content-Type: application/json&quot; --data @body.json ${req.abs_href.rpc()}
+{&quot;id&quot;: 123, &quot;error&quot;: null, &quot;result&quot;: &quot;= Welcome to....
+}}}
+
+Implementation details:
+
+  * JSON-RPC has no formalized type system, so a class-hint system is used
+    for input and output of non-standard types:
+    * `{&quot;__jsonclass__&quot;: [&quot;datetime&quot;, &quot;YYYY-MM-DDTHH:MM:SS&quot;]} =&gt; DateTime (UTC)`
+    * `{&quot;__jsonclass__&quot;: [&quot;binary&quot;, &quot;&lt;base64-encoded&gt;&quot;]} =&gt; Binary`
+  * `&quot;id&quot;` is optional, and any marker value received with a
+    request is returned with the response.</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/tracrpc.api.IRPCProtocol/index.html">tracrpc.api.IRPCProtocol</a></li>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+  </thead>
+</table>
