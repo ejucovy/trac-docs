@@ -25,30 +25,41 @@ reasonable protection against attempted brute-force attacks. </pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>account-manager</td>
     <td>login_attempt_max_count</td>
     <td>IntOption</td>
     <td>0</td>
+    <td>Lock user account after specified number of login attempts.
+Value zero means no limit.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>user_lock_max_time</td>
     <td>IntOption</td>
     <td>86400</td>
+    <td>Limit user account lock time to specified time (seconds).
+This is relevant only with user_lock_time_progression &gt; 1.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>user_lock_time</td>
     <td>IntOption</td>
     <td>0</td>
+    <td>Drop user account lock after specified time (seconds).
+Value zero means unlimited lock time.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>user_lock_time_progression</td>
     <td>Option</td>
     <td>1</td>
+    <td>Extend user account lock time incrementally. This is
+based on logarithmic calculation and decimal numbers accepted:
+Value '1' means constant lock time per failed login attempt.
+Value '2' means double locktime after 2nd lock activation,
+four times the initial locktime after 3rd, and so on.</td>
   </tr>
 </table>

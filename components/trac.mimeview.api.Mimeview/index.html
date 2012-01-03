@@ -21,30 +21,35 @@ title: trac.mimeview.api.Mimeview
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>default_charset</td>
     <td>Option</td>
     <td>utf-8</td>
+    <td>Charset to be used when in doubt.</td>
   </tr>
   <tr>
     <td>mimeviewer</td>
     <td>max_preview_size</td>
     <td>IntOption</td>
     <td>262144</td>
+    <td>Maximum file size for HTML preview. (''since 0.9'')</td>
   </tr>
   <tr>
     <td>mimeviewer</td>
     <td>tab_width</td>
     <td>IntOption</td>
     <td>8</td>
+    <td>Displayed tab width in file preview. (''since 0.9'')</td>
   </tr>
   <tr>
     <td>mimeviewer</td>
     <td>treat_as_binary</td>
     <td>ListOption</td>
     <td>application/octet-stream, application/pdf, application/postscript, application/msword,application/rtf,</td>
+    <td>Comma-separated list of MIME types that should be treated as
+binary data. (''since 0.11.5'')</td>
   </tr>
 </table>

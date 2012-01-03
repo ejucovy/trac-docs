@@ -19,18 +19,21 @@ title: announcer.formatters.TicketFormatter
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>ticket_email_header_fields</td>
     <td>ListOption</td>
     <td>owner, reporter, milestone, priority, severity</td>
+    <td>Comma seperated list of fields to appear in tickets.
+Use * to include all headers.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>ticket_link_with_comment</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Include last change anchor to the ticket URL.</td>
   </tr>
 </table>

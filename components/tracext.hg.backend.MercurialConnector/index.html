@@ -21,30 +21,46 @@ title: tracext.hg.backend.MercurialConnector
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>hg</td>
     <td>encoding</td>
     <td>ListOption</td>
     <td>utf-8</td>
+    <td>Encoding that should be used to decode filenames, file
+content, and changeset metadata.  If multiple encodings are
+used for these different situations (or even multiple
+encodings were used for filenames), simply specify a list of
+encodings which will be tried in turn (''since 0.12.0.24'').</td>
   </tr>
   <tr>
     <td>hg</td>
     <td>hgrc</td>
     <td>PathOption</td>
     <td></td>
+    <td>Optional path to an hgrc file which will be used to specify
+extra Mercurial configuration options (see
+http://www.selenic.com/mercurial/hgrc.5.html).</td>
   </tr>
   <tr>
     <td>hg</td>
     <td>node_format</td>
     <td>ChoiceOption</td>
     <td>short</td>
+    <td>Specify how the commit SHA1 hashes should be
+displayed. Possible choices are: 'short', the SHA1 hash is
+abbreviated to its first 12 digits, or 'hex', the hash is
+shown in full.</td>
   </tr>
   <tr>
     <td>hg</td>
     <td>show_rev</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Show decimal revision in front of the commit SHA1 hash.  While
+this number is specific to the particular clone used to browse
+the repository, this can sometimes give an useful hint about
+the relative &quot;age&quot; of a revision.</td>
   </tr>
 </table>

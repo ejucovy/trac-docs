@@ -19,30 +19,38 @@ title: trac.db.api.DatabaseManager
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>backup_dir</td>
     <td>Option</td>
     <td>db</td>
+    <td>Database backup location</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>database</td>
     <td>Option</td>
     <td>sqlite:db/trac.db</td>
+    <td>Database connection
+[wiki:TracEnvironment#DatabaseConnectionStrings string] for this
+project</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>debug_sql</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Show the SQL queries in the Trac log, at DEBUG level.
+''(Since 0.11.5)''</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>timeout</td>
     <td>IntOption</td>
     <td>20</td>
+    <td>Timeout value for database connection, in seconds.
+Use '0' to specify ''no timeout''. ''(Since 0.11)''</td>
   </tr>
 </table>

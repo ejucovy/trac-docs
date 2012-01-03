@@ -20,18 +20,22 @@ title: announcer.subscribers.TicketUpdaterSubscriber
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>never_notify_updater_distributor</td>
     <td>ListOption</td>
     <td>email</td>
+    <td>Comma seperated list of distributors to send the message to
+by default.  ex. email, xmpp</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>never_notify_updater</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>The never_notify_updater stops users from recieving announcements
+when they update tickets.</td>
   </tr>
 </table>

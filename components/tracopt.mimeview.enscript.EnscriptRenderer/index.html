@@ -19,18 +19,28 @@ title: tracopt.mimeview.enscript.EnscriptRenderer
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>mimeviewer</td>
     <td>enscript_modes</td>
     <td>ListOption</td>
     <td>text/x-dylan:dylan:4</td>
+    <td>List of additional MIME types known by Enscript.
+For each, a tuple `mimetype:mode:quality` has to be
+specified, where `mimetype` is the MIME type,
+`mode` is the corresponding Enscript mode to be used
+for the conversion and `quality` is the quality ratio
+associated to this conversion.
+That can also be used to override the default
+quality ratio used by the Enscript render, which is 2
+(''since 0.10'').</td>
   </tr>
   <tr>
     <td>mimeviewer</td>
     <td>enscript_path</td>
     <td>Option</td>
     <td>enscript</td>
+    <td>Path to the Enscript executable.</td>
   </tr>
 </table>

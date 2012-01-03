@@ -29,96 +29,167 @@ of a directory structure containing among other things:
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>base_url</td>
     <td>Option</td>
     <td></td>
+    <td>Reference URL for the Trac deployment.
+
+This is the base URL that will be used when producing
+documents that will be used outside of the web browsing
+context, like for example when inserting URLs pointing to Trac
+resources in notification e-mails.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>use_base_url_for_redirect</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Optionally use `[trac] base_url` for redirects.
+
+In some configurations, usually involving running Trac behind
+a HTTP proxy, Trac can't automatically reconstruct the URL
+that is used to access it. You may need to use this option to
+force Trac to use the `base_url` setting also for
+redirects. This introduces the obvious limitation that this
+environment will only be usable when accessible from that URL,
+as redirects are frequently used. ''(since 0.10.5)''</td>
   </tr>
   <tr>
     <td>logging</td>
     <td>log_file</td>
     <td>Option</td>
     <td>trac.log</td>
+    <td>If `log_type` is `file`, this should be a path to the
+log-file.  Relative paths are resolved relative to the `log`
+directory of the environment.</td>
   </tr>
   <tr>
     <td>logging</td>
     <td>log_format</td>
     <td>Option</td>
     <td></td>
+    <td>Custom logging format.
+
+If nothing is set, the following will be used:
+
+Trac[$(module)s] $(levelname)s: $(message)s
+
+In addition to regular key names supported by the Python
+logger library (see
+http://docs.python.org/library/logging.html), one could use:
+ - $(path)s     the path for the current environment
+ - $(basename)s the last path component of the current environment
+ - $(project)s  the project name
+
+Note the usage of `$(...)s` instead of `%(...)s` as the latter form
+would be interpreted by the ConfigParser itself.
+
+Example:
+`($(thread)d) Trac[$(basename)s:$(module)s] $(levelname)s: $(message)s`
+
+''(since 0.10.5)''</td>
   </tr>
   <tr>
     <td>logging</td>
     <td>log_level</td>
     <td>Option</td>
     <td>DEBUG</td>
+    <td>Level of verbosity in log.
+
+Should be one of (`CRITICAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`).</td>
   </tr>
   <tr>
     <td>logging</td>
     <td>log_type</td>
     <td>Option</td>
     <td>none</td>
+    <td>Logging facility to use.
+
+Should be one of (`none`, `file`, `stderr`, `syslog`, `winlog`).</td>
   </tr>
   <tr>
     <td>project</td>
     <td>admin</td>
     <td>Option</td>
     <td></td>
+    <td>E-Mail address of the project's administrator.</td>
   </tr>
   <tr>
     <td>project</td>
     <td>admin_trac_url</td>
     <td>Option</td>
     <td>.</td>
+    <td>Base URL of a Trac instance where errors in this Trac
+should be reported.
+
+This can be an absolute or relative URL, or '.' to reference
+this Trac instance. An empty value will disable the reporting
+buttons.  (''since 0.11.3'')</td>
   </tr>
   <tr>
     <td>project</td>
     <td>descr</td>
     <td>Option</td>
     <td>My example project</td>
+    <td>Short description of the project.</td>
   </tr>
   <tr>
     <td>project</td>
     <td>footer</td>
     <td>Option</td>
     <td>Visit the Trac open source project at&lt;br /&gt;&lt;a href=&quot;http://trac.edgewall.org/&quot;&gt;http://trac.edgewall.org/&lt;/a&gt;</td>
+    <td>Page footer text (right-aligned).</td>
   </tr>
   <tr>
     <td>project</td>
     <td>icon</td>
     <td>Option</td>
     <td>common/trac.ico</td>
+    <td>URL of the icon of the project.</td>
   </tr>
   <tr>
     <td>project</td>
     <td>name</td>
     <td>Option</td>
     <td>My Project</td>
+    <td>Name of the project.</td>
   </tr>
   <tr>
     <td>project</td>
     <td>url</td>
     <td>Option</td>
     <td></td>
+    <td>URL of the main project web site, usually the website in
+which the `base_url` resides. This is used in notification
+e-mails.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>secure_cookies</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Restrict cookies to HTTPS connections.
+
+When true, set the `secure` flag on all cookies so that they
+are only sent to the server on HTTPS connections. Use this if
+your Trac instance is only accessible through HTTPS. (''since
+0.11.2'')</td>
   </tr>
   <tr>
     <td>inherit</td>
     <td>plugins_dir</td>
     <td>PathOption</td>
     <td></td>
+    <td>Path to the //shared plugins directory//.
+
+Plugins in that directory are loaded in addition to those in
+the directory of the environment `plugins`, with this one
+taking precedence.
+
+(''since 0.11'')</td>
   </tr>
 </table>

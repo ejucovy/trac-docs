@@ -37,42 +37,65 @@ In that case, there's no changeset information displayed.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>changeset</td>
     <td>max_diff_bytes</td>
     <td>IntOption</td>
     <td>10000000</td>
+    <td>Maximum total size in bytes of the modified files (their old size
+plus their new size) for which the changeset view will attempt to show
+the diffs inlined (''since 0.10'').</td>
   </tr>
   <tr>
     <td>changeset</td>
     <td>max_diff_files</td>
     <td>IntOption</td>
     <td>0</td>
+    <td>Maximum number of modified files for which the changeset view will
+attempt to show the diffs inlined (''since 0.10'').</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>changeset_collapse_events</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether consecutive changesets from the same author having 
+exactly the same message should be presented as one event.
+That event will link to the range of changesets in the log view.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>changeset_long_messages</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether wiki-formatted changeset messages should be multiline or
+not.
+
+If this option is not specified or is false and `wiki_format_messages`
+is set to true, changeset messages will be single line only, losing
+some formatting (bullet points, etc).</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>changeset_show_files</td>
     <td>Option</td>
     <td>0</td>
+    <td>Number of files to show (`-1` for unlimited, `0` to disable).
+
+This can also be `location`, for showing the common prefix for the
+changed files. (since 0.11).</td>
   </tr>
   <tr>
     <td>changeset</td>
     <td>wiki_format_messages</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>Whether wiki formatting should be applied to changeset messages.
+
+If this option is disabled, changeset messages will be rendered as
+pre-formatted text.</td>
   </tr>
 </table>

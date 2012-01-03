@@ -25,18 +25,20 @@ that the user can select to start watching a resource.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>ctxtnav_names</td>
     <td>ListOption</td>
     <td>Watch This, Unwatch This</td>
+    <td>Text of context navigation entries. An empty list removes them from the context navigation bar.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>watchable_paths</td>
     <td>ListOption</td>
     <td>wiki/*,ticket/*</td>
+    <td>List of URL paths to allow watching. Globs are supported.</td>
   </tr>
 </table>

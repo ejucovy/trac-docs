@@ -22,18 +22,26 @@ title: trac.perm.PermissionSystem
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>permission_policies</td>
     <td>OrderedExtensionsOption</td>
     <td>DefaultPermissionPolicy, LegacyAttachmentPolicy</td>
+    <td>List of components implementing `IPermissionPolicy`, in the order in
+which they will be applied. These components manage fine-grained access
+control to Trac resources.
+Defaults to the DefaultPermissionPolicy (pre-0.11 behavior) and
+LegacyAttachmentPolicy (map ATTACHMENT_* permissions to realm specific
+ones)</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>permission_store</td>
     <td>ExtensionOption</td>
     <td>DefaultPermissionStore</td>
+    <td>Name of the component implementing `IPermissionStore`, which is used
+for managing user and group permissions.</td>
   </tr>
 </table>

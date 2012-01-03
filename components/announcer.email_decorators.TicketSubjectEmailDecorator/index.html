@@ -20,12 +20,15 @@ ticket_email_subject configuration.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>ticket_email_subject</td>
     <td>Option</td>
     <td>Ticket #${ticket.id}: ${ticket['summary']} {% if action %}[${action}]{% end %}</td>
+    <td>Format string for ticket email subject.  This is
+a mini genshi template that is passed the ticket
+event and action objects.</td>
   </tr>
 </table>

@@ -26,12 +26,15 @@ title: trac.ticket.roadmap.MilestoneModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>milestone</td>
     <td>stats_provider</td>
     <td>ExtensionOption</td>
     <td>DefaultTicketGroupStatsProvider</td>
+    <td>Name of the component implementing `ITicketGroupStatsProvider`, 
+which is used to collect statistics on groups of tickets for display
+in the milestone views.</td>
   </tr>
 </table>

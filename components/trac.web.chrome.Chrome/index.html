@@ -28,126 +28,217 @@ Chrome is everything that is not actual page content.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>auto_preview_timeout</td>
     <td>FloatOption</td>
     <td>2.0</td>
+    <td>Inactivity timeout in seconds after which the automatic wiki preview
+triggers an update. This option can contain floating-point values. The
+lower the setting, the more requests will be made to the server. Set
+this to 0 to disable automatic preview. The default is 2.0 seconds.
+(''since 0.12'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>auto_reload</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Automatically reload template files after modification.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>default_dateinfo_format</td>
     <td>Option</td>
     <td>relative</td>
+    <td>The date information format. Valid options are 'relative' for
+displaying relative format and 'absolute' for displaying absolute
+format. (''since 0.13'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>fingerprint_resources</td>
     <td>ChoiceOption</td>
     <td>content</td>
+    <td>Control the fingerprinting of static resources.
+
+URLs to static resources below `/chrome` have the form
+`/chrome/![0-9a-f]{8}/.*`, where the second element is a fingerprint
+of the ''content'' of all resources (for &quot;content&quot;) or their
+''metadata'' (size and mtime, for &quot;meta&quot;). This allows aggressive
+caching of static resources on the browser, while still ensuring that
+they are reloaded when they change.
+
+Setting this option to &quot;disabled&quot; disables fingerprinting, and
+reverts the URLs to static resources to `/chrome/.*`.
+
+(''since 0.13'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>genshi_cache_size</td>
     <td>IntOption</td>
     <td>128</td>
+    <td>The maximum number of templates that the template loader will cache
+in memory. The default value is 128. You may want to choose a higher
+value if your site uses a larger number of templates, and you have
+enough memory to spare, or you can reduce it if you are short on
+memory.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>htdocs_location</td>
     <td>Option</td>
     <td></td>
+    <td>Base URL for serving the core static resources below 
+`/chrome/common/`.
+
+It can be left empty, and Trac will simply serve those resources
+itself.
+
+Advanced users can use this together with
+[TracAdmin trac-admin ... deploy &lt;deploydir&gt;] to allow serving the
+static resources for Trac directly from the web server.
+Note however that this only applies to the `&lt;deploydir&gt;/htdocs/common`
+directory, the other deployed resources (i.e. those from plugins) 
+will not be made available this way and additional rewrite 
+rules will be needed in the web server.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>jquery_location</td>
     <td>Option</td>
     <td></td>
+    <td>Location of the jQuery !JavaScript library (version 1.5.1).
+
+An empty value loads jQuery from the copy bundled with Trac.
+
+Alternatively, jQuery could be loaded from a CDN, for example:
+http://code.jquery.com/jquery-1.5.1.min.js,
+http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js or
+https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js.
+
+(''since 0.13'')</td>
   </tr>
   <tr>
     <td>header_logo</td>
     <td>alt</td>
     <td>Option</td>
     <td>(please configure the [header_logo] section in trac.ini)</td>
+    <td>Alternative text for the header logo.</td>
   </tr>
   <tr>
     <td>header_logo</td>
     <td>height</td>
     <td>IntOption</td>
     <td>-1</td>
+    <td>Height of the header logo image in pixels.</td>
   </tr>
   <tr>
     <td>header_logo</td>
     <td>link</td>
     <td>Option</td>
     <td></td>
+    <td>URL to link to, from the header logo.</td>
   </tr>
   <tr>
     <td>header_logo</td>
     <td>src</td>
     <td>Option</td>
     <td>site/your_project_logo.png</td>
+    <td>URL of the image to use as header logo.
+It can be absolute, server relative or relative.
+
+If relative, it is relative to one of the `/chrome` locations:
+`site/your-logo.png` if `your-logo.png` is located in the `htdocs`
+folder within your TracEnvironment;
+`common/your-logo.png` if `your-logo.png` is located in the
+folder mapped to the [#trac-section htdocs_location] URL. 
+Only specifying `your-logo.png` is equivalent to the latter.</td>
   </tr>
   <tr>
     <td>header_logo</td>
     <td>width</td>
     <td>IntOption</td>
     <td>-1</td>
+    <td>Width of the header logo image in pixels.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>mainnav</td>
     <td>ListOption</td>
     <td>wiki, timeline, roadmap, browser, tickets, newticket, search</td>
+    <td>Order of the items to display in the `mainnav` navigation bar, 
+listed by IDs. See also TracNavigation.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>metanav</td>
     <td>ListOption</td>
     <td>login, logout, prefs, help, about</td>
+    <td>Order of the items to display in the `metanav` navigation bar,
+listed by IDs. See also TracNavigation.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>never_obfuscate_mailto</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Never obfuscate `mailto:` links explicitly written in the wiki, 
+even if `show_email_addresses` is false or the user has not the 
+EMAIL_VIEW permission (''since 0.11.6'').</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>resizable_textareas</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>Make `&lt;textarea&gt;` fields resizable. Requires !JavaScript.
+(''since 0.12'')</td>
   </tr>
   <tr>
     <td>inherit</td>
     <td>htdocs_dir</td>
     <td>PathOption</td>
     <td></td>
+    <td>Path to the //shared htdocs directory//.
+
+Static resources in that directory are mapped to /chrome/shared
+under the environment URL, in addition to common and site locations.
+
+This can be useful in site.html for common interface customization
+of multiple Trac environments.
+
+(''since 0.13'')</td>
   </tr>
   <tr>
     <td>inherit</td>
     <td>templates_dir</td>
     <td>PathOption</td>
     <td></td>
+    <td>Path to the //shared templates directory//.
+
+Templates in that directory are loaded in addition to those in the
+environments `templates` directory, but the latter take precedence.
+
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>show_email_addresses</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Show email addresses instead of usernames. If false, we obfuscate
+email addresses. (''since 0.11'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>show_ip_addresses</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Show IP addresses for resource edits (e.g. wiki).
+(''since 0.11.3'')</td>
   </tr>
 </table>

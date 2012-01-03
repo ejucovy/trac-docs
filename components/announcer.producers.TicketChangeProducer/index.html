@@ -20,12 +20,16 @@ title: announcer.producers.TicketChangeProducer
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>ignore_cc_changes</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>When true, the system will not send out announcement events if
+the only field that was changed was CC. A change to the CC field that
+happens at the same as another field will still result in an event
+being created.</td>
   </tr>
 </table>

@@ -21,12 +21,17 @@ can be regenerated later.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>email_threaded_realms</td>
     <td>ListOption</td>
     <td>ticket,wiki</td>
+    <td>These are realms with announcements that should be threaded
+emails.  In order for email threads to work, the announcer
+system needs to give the email recreatable Message-IDs based
+on the resources in the realm.  The resources must have a unique
+and immutable id, name or str() representation in it's realm</td>
   </tr>
 </table>

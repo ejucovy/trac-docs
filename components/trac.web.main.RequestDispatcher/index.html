@@ -26,36 +26,51 @@ request pre- and post-processing.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>default_date_format</td>
     <td>Option</td>
     <td></td>
+    <td>The date format. Valid options are 'iso8601' for selecting
+ISO 8601 format, or leave it empty which means the default
+date format will be inferred from the browser's default
+language. (''since 0.13'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>default_handler</td>
     <td>ExtensionOption</td>
     <td>WikiModule</td>
+    <td>Name of the component that handles requests to the base
+URL.
+
+Options include `TimelineModule`, `RoadmapModule`,
+`BrowserModule`, `QueryModule`, `ReportModule`, `TicketModule`
+and `WikiModule`. The default is `WikiModule`. (''since 0.9'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>default_language</td>
     <td>Option</td>
     <td></td>
+    <td>The preferred language to use if no user preference has
+been set. (''since 0.12.1'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>default_timezone</td>
     <td>Option</td>
     <td></td>
+    <td>The default timezone to use</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>request_filters</td>
     <td>OrderedExtensionsOption</td>
     <td></td>
+    <td>Ordered list of filters to apply to all requests
+(''since 0.10'').</td>
   </tr>
 </table>

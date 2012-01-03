@@ -21,42 +21,48 @@ title: keywordsuggest.keywordsuggest.KeywordSuggestModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>keywordsuggest</td>
     <td>field</td>
     <td>Option</td>
     <td>keywords</td>
+    <td>Field to which the drop-down list should be attached.</td>
   </tr>
   <tr>
     <td>keywordsuggest</td>
     <td>helppage</td>
     <td>Option</td>
     <td></td>
+    <td>If specified, 'keywords' label will be turned into a link to this URL.</td>
   </tr>
   <tr>
     <td>keywordsuggest</td>
     <td>helppage.newwindow</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>If true and helppage specified, wiki page will open in a new window. Default is false.</td>
   </tr>
   <tr>
     <td>keywordsuggest</td>
     <td>keywords</td>
     <td>ListOption</td>
     <td></td>
+    <td>A list of comma separated values available for input.</td>
   </tr>
   <tr>
     <td>keywordsuggest</td>
     <td>matchcontains</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Include partial matches in suggestion list. Default is true.</td>
   </tr>
   <tr>
     <td>keywordsuggest</td>
     <td>multipleseparator</td>
     <td>Option</td>
     <td>,</td>
+    <td>Character(s) to use as separators between keywords.Default is `,`.</td>
   </tr>
 </table>

@@ -20,12 +20,15 @@ wiki_email_subject configuration.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>wiki_email_subject</td>
     <td>Option</td>
     <td>Page: ${page.name} ${action}</td>
+    <td>Format string for the wiki email subject.  This is a
+mini genshi template and it is passed the page, event
+and action objects.</td>
   </tr>
 </table>

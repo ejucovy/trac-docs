@@ -25,24 +25,33 @@ title: trac.timeline.web_ui.TimelineModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>timeline</td>
     <td>abbreviated_messages</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Whether wiki-formatted event messages should be truncated or not.
+
+This only affects the default rendering, and can be overriden by
+specific event providers, see their own documentation.
+(''Since 0.11'')</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>default_daysback</td>
     <td>IntOption</td>
     <td>30</td>
+    <td>Default number of days displayed in the Timeline, in days.
+(''since 0.9.'')</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>max_daysback</td>
     <td>IntOption</td>
     <td>90</td>
+    <td>Maximum number of days (-1 for unlimited) displayable in the 
+Timeline. (''since 0.11'')</td>
   </tr>
 </table>

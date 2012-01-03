@@ -30,12 +30,13 @@ stores.  If it is a list, then each password store is queried in turn.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>account-manager</td>
     <td>password_format</td>
     <td>Option</td>
+    <td></td>
     <td></td>
   </tr>
   <tr>
@@ -43,41 +44,55 @@ stores.  If it is a list, then each password store is queried in turn.</pre>
     <td>password_store</td>
     <td>OrderedExtensionsOption</td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>allow_delete_account</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Allow users to delete their own account.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>force_passwd_change</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Force the user to change password when it's reset.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>persistent_sessions</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Allow the user to be remembered across sessions without
+needing to re-authenticate. This is, user checks a
+&quot;Remember Me&quot; checkbox and, next time he visits the site,
+he'll be remembered.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>refresh_passwd</td>
     <td>BoolOption</td>
     <td>False</td>
+    <td>Re-set passwords on successful authentication.
+This is most useful to move users to a new password store or
+enforce new store configuration (i.e. changed hash type),
+but should be disabled/unset otherwise.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>username_char_blacklist</td>
     <td>Option</td>
     <td>:[]</td>
+    <td>Always exclude some special characters from usernames.
+This is enforced upon new user registration.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>verify_email</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Verify the email address of Trac users.</td>
   </tr>
 </table>

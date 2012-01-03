@@ -24,24 +24,45 @@ title: trac.versioncontrol.api.RepositoryManager
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>repository_dir</td>
     <td>Option</td>
     <td></td>
+    <td>Path to the default repository. This can also be a relative path
+(''since 0.11'').
+
+This option is deprecated, and repositories should be defined in the
+[TracIni#repositories-section repositories] section, or using the
+&quot;Repositories&quot; admin panel. (''since 0.12'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>repository_sync_per_request</td>
     <td>ListOption</td>
     <td>(default)</td>
+    <td>List of repositories that should be synchronized on every page
+request.
+
+Leave this option empty if you have set up post-commit hooks calling
+`trac-admin $ENV changeset added` on all your repositories
+(recommended). Otherwise, set it to a comma-separated list of
+repository names. Note that this will negatively affect performance,
+and will prevent changeset listeners from receiving events from the
+repositories specified here. The default is to synchronize the default
+repository, for backward compatibility. (''since 0.12'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>repository_type</td>
     <td>Option</td>
     <td>svn</td>
+    <td>Default repository connector type. (''since 0.10'')
+
+This is also used as the default repository type for repositories
+defined in [[TracIni#repositories-section repositories]] or using the
+&quot;Repositories&quot; admin panel. (''since 0.12'')</td>
   </tr>
 </table>

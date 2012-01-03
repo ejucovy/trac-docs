@@ -22,24 +22,29 @@ list must be configured by the system administrator.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>custom_cc_fields</td>
     <td>ListOption</td>
     <td></td>
+    <td>Field names that contain users that should be notified on ticket changes</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>always_notify_custom_cc_distributor</td>
     <td>ListOption</td>
     <td>email</td>
+    <td>Comma seperated list of distributors to send the message to
+by default.  ex. email, xmpp</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>always_notify_custom_cc</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>The always_notify_custom_cc will notify the users in the custom
+cc field by default when a ticket is modified.</td>
   </tr>
 </table>

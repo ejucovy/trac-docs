@@ -20,18 +20,20 @@ title: newticketlikethis.core.NewTicketLikeThisPlugin
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>newticketlikethis</td>
     <td>ticket_clone_permission</td>
     <td>Option</td>
     <td>TICKET_ADMIN</td>
+    <td>The permission required for the &quot;Clone&quot; button to appear on the ticket detail page</td>
   </tr>
   <tr>
     <td>newticketlikethis</td>
     <td>ticket_cloner</td>
     <td>ExtensionOption</td>
     <td>SimpleTicketCloner</td>
+    <td>Name of the component implementing `ITicketCloner`, which provides the logic for building a new ticket from an existing one.</td>
   </tr>
 </table>

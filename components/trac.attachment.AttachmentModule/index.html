@@ -25,24 +25,38 @@ title: trac.attachment.AttachmentModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>attachment</td>
     <td>max_size</td>
     <td>IntOption</td>
     <td>262144</td>
+    <td>Maximum allowed file size (in bytes) for ticket and wiki 
+attachments.</td>
   </tr>
   <tr>
     <td>attachment</td>
     <td>max_zip_size</td>
     <td>IntOption</td>
     <td>2097152</td>
+    <td>Maximum allowed total size (in bytes) for an attachment list to be
+downloadable as a `.zip`. Set this to -1 to disable download as `.zip`.
+(''since 0.13'')</td>
   </tr>
   <tr>
     <td>attachment</td>
     <td>render_unsafe_content</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether attachments should be rendered in the browser, or
+only made downloadable.
+
+Pretty much any file may be interpreted as HTML by the browser,
+which allows a malicious user to attach a file containing cross-site
+scripting attacks.
+
+For public sites where anonymous users can create attachments it is
+recommended to leave this option disabled (which is the default).</td>
   </tr>
 </table>

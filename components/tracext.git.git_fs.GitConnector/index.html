@@ -20,60 +20,69 @@ title: tracext.git.git_fs.GitConnector
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>git</td>
     <td>cached_repository</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>wrap `GitRepository` in `CachedRepository`</td>
   </tr>
   <tr>
     <td>git</td>
     <td>git_bin</td>
     <td>PathOption</td>
     <td>/usr/bin/git</td>
+    <td>path to git executable (relative to trac project folder!)</td>
   </tr>
   <tr>
     <td>git</td>
     <td>git_fs_encoding</td>
     <td>Option</td>
     <td>utf-8</td>
+    <td>define charset encoding of paths within git repository</td>
   </tr>
   <tr>
     <td>git</td>
     <td>persistent_cache</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>enable persistent caching of commit tree</td>
   </tr>
   <tr>
     <td>git</td>
     <td>shortrev_len</td>
     <td>IntOption</td>
     <td>7</td>
+    <td>length rev sha sums should be tried to be abbreviated to (must be &gt;= 4 and &lt;= 40)</td>
   </tr>
   <tr>
     <td>git</td>
     <td>trac_user_rlookup</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>enable reverse mapping of git email addresses to trac user ids</td>
   </tr>
   <tr>
     <td>git</td>
     <td>use_committer_id</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>use git-committer id instead of git-author id as changeset owner</td>
   </tr>
   <tr>
     <td>git</td>
     <td>use_committer_time</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>use git-committer-author timestamp instead of git-author timestamp as changeset timestamp</td>
   </tr>
   <tr>
     <td>git</td>
     <td>wiki_shortrev_len</td>
     <td>IntOption</td>
     <td>40</td>
+    <td>minimum length of hex-string for which auto-detection as sha id is performed (must be &gt;= 4 and &lt;= 40)</td>
   </tr>
 </table>

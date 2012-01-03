@@ -19,12 +19,16 @@ title: trac.versioncontrol.admin.RepositoryAdminPanel
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>versioncontrol</td>
     <td>allowed_repository_dir_prefixes</td>
     <td>ListOption</td>
     <td></td>
+    <td>Comma-separated list of allowed prefixes for repository
+directories when adding and editing repositories in the repository
+admin panel. If the list is empty, all repository directories are
+allowed. (''since 0.12.1'')</td>
   </tr>
 </table>

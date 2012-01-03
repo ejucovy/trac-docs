@@ -24,90 +24,114 @@ title: trac.ticket.api.TicketSystem
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>ticket</td>
     <td>workflow</td>
     <td>OrderedExtensionsOption</td>
     <td>ConfigurableTicketWorkflow</td>
+    <td>Ordered list of workflow controllers to use for ticket actions
+(''since 0.11'').</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_cc</td>
     <td>Option</td>
     <td></td>
+    <td>Default cc: list for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_component</td>
     <td>Option</td>
     <td></td>
+    <td>Default component for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_description</td>
     <td>Option</td>
     <td></td>
+    <td>Default description for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_keywords</td>
     <td>Option</td>
     <td></td>
+    <td>Default keywords for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_milestone</td>
     <td>Option</td>
     <td></td>
+    <td>Default milestone for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_owner</td>
     <td>Option</td>
     <td>&lt; default &gt;</td>
+    <td>Default owner for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_priority</td>
     <td>Option</td>
     <td>major</td>
+    <td>Default priority for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_resolution</td>
     <td>Option</td>
     <td>fixed</td>
+    <td>Default resolution for resolving (closing) tickets
+(''since 0.11'').</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_severity</td>
     <td>Option</td>
     <td></td>
+    <td>Default severity for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_summary</td>
     <td>Option</td>
     <td></td>
+    <td>Default summary (title) for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_type</td>
     <td>Option</td>
     <td>defect</td>
+    <td>Default type for newly created tickets (''since 0.9'').</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>default_version</td>
     <td>Option</td>
     <td></td>
+    <td>Default version for newly created tickets.</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>restrict_owner</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Make the owner field of tickets use a drop-down menu.
+Be sure to understand the performance implications before activating
+this option. See
+[TracTickets#Assign-toasDrop-DownList Assign-to as Drop-Down List].
+
+Please note that e-mail addresses are '''not''' obfuscated in the
+resulting drop-down menu, so this option should not be used if
+e-mail addresses must remain protected.
+(''since 0.9'')</td>
   </tr>
 </table>

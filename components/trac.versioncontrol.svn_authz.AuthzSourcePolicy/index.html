@@ -26,18 +26,24 @@ granted on at least one modified file, as well as for empty changesets.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>authz_file</td>
     <td>PathOption</td>
     <td></td>
+    <td>The path to the Subversion
+[http://svnbook.red-bean.com/en/1.5/svn.serverconfig.pathbasedauthz.html authorization (authz) file].
+To enable authz permission checking, the `AuthzSourcePolicy` permission
+policy must be added to `[trac] permission_policies`.</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>authz_module_name</td>
     <td>Option</td>
     <td></td>
+    <td>The module prefix used in the `authz_file` for the default
+repository. If left empty, the global section is used.</td>
   </tr>
 </table>

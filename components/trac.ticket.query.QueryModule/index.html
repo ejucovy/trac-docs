@@ -22,24 +22,36 @@ title: trac.ticket.query.QueryModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>query</td>
     <td>default_anonymous_query</td>
     <td>Option</td>
     <td>status!=closed&amp;cc~=$USER</td>
+    <td>The default query for anonymous users. The query is either
+in [TracQuery#QueryLanguage query language] syntax, or a URL query
+string starting with `?` as used in `query:`
+[TracQuery#UsingTracLinks Trac links].
+(''since 0.11.2'')</td>
   </tr>
   <tr>
     <td>query</td>
     <td>default_query</td>
     <td>Option</td>
     <td>status!=closed&amp;owner=$USER</td>
+    <td>The default query for authenticated users. The query is either
+in [TracQuery#QueryLanguage query language] syntax, or a URL query
+string starting with `?` as used in `query:`
+[TracQuery#UsingTracLinks Trac links].
+(''since 0.11.2'')</td>
   </tr>
   <tr>
     <td>query</td>
     <td>items_per_page</td>
     <td>IntOption</td>
     <td>100</td>
+    <td>Number of tickets displayed per page in ticket queries,
+by default (''since 0.11'')</td>
   </tr>
 </table>

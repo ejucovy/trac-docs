@@ -25,54 +25,95 @@ title: trac.versioncontrol.web_ui.browser.BrowserModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>browser</td>
     <td>color_scale</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Enable colorization of the ''age'' column.
+
+This uses the same color scale as the source code annotation:
+blue is older, red is newer.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>downloadable_paths</td>
     <td>ListOption</td>
     <td>/trunk, /branches/*, /tags/*</td>
+    <td>List of repository paths that can be downloaded.
+
+Leave the option empty if you want to disable all downloads, otherwise
+set it to a comma-separated list of authorized paths (those paths are
+glob patterns, i.e. &quot;*&quot; can be used as a wild card)
+(''since 0.10'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>hide_properties</td>
     <td>ListOption</td>
     <td>svk:merge</td>
+    <td>Comma-separated list of version control properties to hide from
+the repository browser.
+(''since 0.9'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>intermediate_color</td>
     <td>Option</td>
     <td></td>
+    <td>(r,g,b) color triple to use for the color corresponding
+to the intermediate color, if two linear interpolations are used
+for the color scale (see `intermediate_point`).
+If not set, the intermediate color between `oldest_color` and
+`newest_color` will be used.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>intermediate_point</td>
     <td>Option</td>
     <td></td>
+    <td>If set to a value between 0 and 1 (exclusive), this will be the
+point chosen to set the `intermediate_color` for interpolating
+the color value.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>newest_color</td>
     <td>Option</td>
     <td>(255, 136, 136)</td>
+    <td>(r,g,b) color triple to use for the color corresponding
+to the newest color, for the color scale used in ''blame'' or
+the browser ''age'' column if `color_scale` is enabled.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>oldest_color</td>
     <td>Option</td>
     <td>(136, 136, 255)</td>
+    <td>(r,g,b) color triple to use for the color corresponding
+to the oldest color, for the color scale used in ''blame'' or
+the browser ''age'' column if `color_scale` is enabled.
+(''since 0.11'')</td>
   </tr>
   <tr>
     <td>browser</td>
     <td>render_unsafe_content</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether raw files should be rendered in the browser, or only made 
+downloadable.
+
+Pretty much any file may be interpreted as HTML by the browser,
+which allows a malicious user to create a file containing cross-site
+scripting attacks.
+
+For open repositories where anyone can check-in a file, it is
+recommended to leave this option disabled (which is the default).</td>
   </tr>
 </table>

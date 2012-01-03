@@ -20,18 +20,27 @@ title: trac.versioncontrol.svn_fs.SubversionConnector
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>svn</td>
     <td>branches</td>
     <td>ListOption</td>
     <td>trunk, branches/*</td>
+    <td>Comma separated list of paths categorized as branches.
+If a path ends with '*', then all the directory entries found below 
+that path will be included. 
+Example: `/trunk, /branches/*, /projectAlpha/trunk, /sandbox/*`</td>
   </tr>
   <tr>
     <td>svn</td>
     <td>tags</td>
     <td>ListOption</td>
     <td>tags/*</td>
+    <td>Comma separated list of paths categorized as tags.
+
+If a path ends with '*', then all the directory entries found below
+that path will be included.
+Example: `/tags/*, /projectAlpha/tags/A-1.0, /projectAlpha/tags/A-v1.1`</td>
   </tr>
 </table>

@@ -25,42 +25,62 @@ title: trac.ticket.web_ui.TicketModule
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>ticket</td>
     <td>max_comment_size</td>
     <td>IntOption</td>
     <td>262144</td>
+    <td>Don't accept tickets with a too big comment.
+(''since 0.11.2'')</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>max_description_size</td>
     <td>IntOption</td>
     <td>262144</td>
+    <td>Don't accept tickets with a too big description.
+(''since 0.11'').</td>
   </tr>
   <tr>
     <td>ticket</td>
     <td>preserve_newlines</td>
     <td>Option</td>
     <td>default</td>
+    <td>Whether Wiki formatter should respect the new lines present
+in the Wiki text.
+If set to 'default', this is equivalent to 'yes' for new environments
+but keeps the old behavior for upgraded environments (i.e. 'no').
+(''since 0.11'').</td>
   </tr>
   <tr>
     <td>query</td>
     <td>ticketlink_query</td>
     <td>Option</td>
     <td>?status=!closed</td>
+    <td>The base query to be used when linkifying values of ticket
+fields. The query is a URL query
+string starting with `?` as used in `query:`
+[TracQuery#UsingTracLinks Trac links].
+(''since 0.12'')</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>ticket_show_details</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Enable the display of all ticket changes in the timeline, not only
+open / close operations (''since 0.9'').</td>
   </tr>
   <tr>
     <td>timeline</td>
     <td>newticket_formatter</td>
     <td>Option</td>
     <td>oneliner</td>
+    <td>Which formatter flavor (e.g. 'html' or 'oneliner') should be
+used when presenting the description for new tickets.
+If 'oneliner', the [timeline] abbreviated_messages option applies.
+(''since 0.11'').</td>
   </tr>
 </table>

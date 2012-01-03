@@ -19,54 +19,62 @@ title: announcer.distributors.mail.SmtpEmailSender
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>smtp</td>
     <td>debuglevel</td>
     <td>IntOption</td>
     <td>0</td>
+    <td>Set to 1 for useful smtp debugging on stdout.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>password</td>
     <td>Option</td>
     <td></td>
+    <td>Password for SMTP server.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>port</td>
     <td>IntOption</td>
     <td>25</td>
+    <td>SMTP server port to use for email notification.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>server</td>
     <td>Option</td>
     <td>localhost</td>
+    <td>SMTP server hostname to use for email notifications.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>timeout</td>
     <td>IntOption</td>
     <td>10</td>
+    <td>SMTP server connection timeout. (requires python-2.6)</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>use_ssl</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Use ssl for smtp connection.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>use_tls</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Use SSL/TLS to send notifications over SMTP.</td>
   </tr>
   <tr>
     <td>smtp</td>
     <td>user</td>
     <td>Option</td>
     <td></td>
+    <td>Username for SMTP server.</td>
   </tr>
 </table>

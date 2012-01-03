@@ -22,18 +22,28 @@ title: trac.mimeview.pygments.PygmentsRenderer
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>mimeviewer</td>
     <td>pygments_default_style</td>
     <td>Option</td>
     <td>trac</td>
+    <td>The default style to use for Pygments syntax highlighting.</td>
   </tr>
   <tr>
     <td>mimeviewer</td>
     <td>pygments_modes</td>
     <td>ListOption</td>
     <td></td>
+    <td>List of additional MIME types known by Pygments.
+
+For each, a tuple `mimetype:mode:quality` has to be
+specified, where `mimetype` is the MIME type,
+`mode` is the corresponding Pygments mode to be used
+for the conversion and `quality` is the quality ratio
+associated to this conversion. That can also be used
+to override the default quality ratio used by the
+Pygments render.</td>
   </tr>
 </table>

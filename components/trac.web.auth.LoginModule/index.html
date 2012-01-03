@@ -33,30 +33,44 @@ resources.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>trac</td>
     <td>auth_cookie_lifetime</td>
     <td>IntOption</td>
     <td>0</td>
+    <td>Lifetime of the authentication cookie, in seconds.
+
+This value determines how long the browser will cache
+authentication information, and therefore, after how much
+inactivity a user will have to log in again. The default value
+of 0 makes the cookie expire at the end of the browsing
+session. (''since 0.12'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>auth_cookie_path</td>
     <td>Option</td>
     <td></td>
+    <td>Path for the authentication cookie. Set this to the common
+base path of several Trac instances if you want them to share
+the cookie.  (''since 0.12'')</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>check_auth_ip</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether the IP address of the user should be checked for
+authentication (''since 0.9'').</td>
   </tr>
   <tr>
     <td>trac</td>
     <td>ignore_auth_case</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Whether login names should be converted to lower case
+(''since 0.9'').</td>
   </tr>
 </table>

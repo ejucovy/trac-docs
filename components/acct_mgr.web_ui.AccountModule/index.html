@@ -27,18 +27,21 @@ AccountManager module must be set in trac.ini in order to use this.</pre>
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>account-manager</td>
     <td>generated_password_length</td>
     <td>IntOption</td>
     <td>8</td>
+    <td>Length of the randomly-generated passwords created when resetting
+the password for an account.</td>
   </tr>
   <tr>
     <td>account-manager</td>
     <td>reset_password</td>
     <td>BoolOption</td>
     <td>True</td>
+    <td>Set to False, if there is no email system setup.</td>
   </tr>
 </table>

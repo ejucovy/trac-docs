@@ -18,36 +18,53 @@ title: trac.ticket.notification.TicketNotificationSystem
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>notification</td>
     <td>always_notify_owner</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Always send notifications to the ticket owner (''since 0.9'').</td>
   </tr>
   <tr>
     <td>notification</td>
     <td>always_notify_reporter</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Always send notifications to any address in the ''reporter''
+field.</td>
   </tr>
   <tr>
     <td>notification</td>
     <td>always_notify_updater</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>Always send notifications to the person who causes the ticket 
+property change and to any previous updater of that ticket.</td>
   </tr>
   <tr>
     <td>notification</td>
     <td>ambiguous_char_width</td>
     <td>Option</td>
     <td>single</td>
+    <td>Which width of ambiguous characters (e.g. 'single' or
+'double') should be used in the table of notification mail.
+
+If 'single', the same width as characters in US-ASCII. This is
+expected by most users. If 'double', twice the width of
+US-ASCII characters.  This is expected by CJK users. ''(since
+0.12.2)''</td>
   </tr>
   <tr>
     <td>notification</td>
     <td>ticket_subject_template</td>
     <td>Option</td>
     <td>$prefix #$ticket.id: $summary</td>
+    <td>A Genshi text template snippet used to get the notification subject.
+
+By default, the subject template is `$prefix #$ticket.id: $summary`.
+`$prefix` being the value of the `smtp_subject_prefix` option.
+''(since 0.11)''</td>
   </tr>
 </table>

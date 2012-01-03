@@ -23,114 +23,179 @@ title: announcer.distributors.mail.EmailDistributor
 <h2>Options:</h2>
 <table>
   <thead>
-    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th></tr>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
   </thead>
   <tr>
     <td>announcer</td>
     <td>email_crypto</td>
     <td>Option</td>
     <td></td>
+    <td>Enable cryptographically operation on email msg body.
+
+Empty string, the default for unset, disables all crypto operations.
+Valid values are:
+    sign          sign msg body with given privkey
+    encrypt       encrypt msg body with pubkeys of all recipients
+    sign,encrypt  sign, than encrypt msg body</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>default_email_format</td>
     <td>Option</td>
     <td>text/plain</td>
+    <td>The default mime type of the email notifications.
+
+This can be overridden on a per user basis through the announcer
+preferences panel.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_from</td>
     <td>Option</td>
     <td>trac@localhost</td>
+    <td>Sender address to use in notification emails.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_sender</td>
     <td>ExtensionOption</td>
     <td>SmtpEmailSender</td>
+    <td>Name of the component implementing `IEmailSender`.
+
+This component is used by the announcer system to send emails.
+Currently, `SmtpEmailSender` and `SendmailEmailSender` are provided.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_enabled</td>
     <td>BoolOption</td>
     <td>true</td>
+    <td>Enable email notification.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_from_name</td>
     <td>Option</td>
     <td></td>
+    <td>Sender name to use in notification emails.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>gpg_binary</td>
     <td>Option</td>
     <td>gpg</td>
+    <td>GnuPG binary name, allows for full path too.
+
+Value 'gpg' is same default as in python-gnupg itself.
+For usual installations location of the gpg binary is auto-detected.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>gpg_home</td>
     <td>Option</td>
     <td></td>
+    <td>Directory containing keyring files.
+
+In case of wrong configuration missing keyring files without content
+will be created in the configured location, provided necessary
+write permssion is granted for the corresponding parent directory.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>mime_encoding</td>
     <td>Option</td>
     <td>base64</td>
+    <td>Specifies the MIME encoding scheme for emails.
+
+Valid options are 'base64' for Base64 encoding, 'qp' for
+Quoted-Printable, and 'none' for no encoding. Note that the no encoding
+means that non-ASCII characters in text are going to cause problems
+with notifications.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>gpg_signing_key</td>
     <td>Option</td>
     <td></td>
+    <td>Keyid of private key (last 8 chars or more) used for signing.
+
+If unset, a private key will be selected from keyring automagicly.
+The password must be available i.e. provided by running gpg-agent
+or empty (bad security). On failing to unlock the private key,
+msg body will get emptied.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>rcpt_allow_regexp</td>
     <td>Option</td>
     <td></td>
+    <td>A whitelist pattern to match any address to before adding to
+recipients list.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>rcpt_local_regexp</td>
     <td>Option</td>
     <td></td>
+    <td>A whitelist pattern to match any address, that should be
+considered local.
+
+This will be evaluated only if msg encryption is set too.
+Recipients with matching email addresses will continue to
+receive unencrypted email messages.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_replyto</td>
     <td>Option</td>
     <td>trac@localhost</td>
+    <td>Reply-To address to use in notification emails.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_address_resolvers</td>
     <td>OrderedExtensionsOption</td>
     <td>SpecifiedEmailResolver, SessionEmailResolver, DefaultDomainEmailResolver</td>
+    <td></td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_subject_prefix</td>
     <td>Option</td>
     <td>__default__</td>
+    <td>Text to prepend to subject line of notification emails.
+
+If the setting is not defined, then the [$project_name] prefix.
+If no prefix is desired, then specifying an empty option
+will disable it.</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>email_to</td>
     <td>Option</td>
     <td>undisclosed-recipients: ;</td>
+    <td>Default To: field</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>use_public_cc</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Recipients can see email addresses of other CC'ed recipients.
+
+If this option is disabled (the default), recipients are put on BCC</td>
   </tr>
   <tr>
     <td>announcer</td>
     <td>use_threaded_delivery</td>
     <td>BoolOption</td>
     <td>false</td>
+    <td>Do message delivery in a separate thread.
+
+Enabling this will improve responsiveness for requests that end up
+with an announcement being sent over email. It requires building
+Python with threading support enabled-- which is usually the case.
+To test, start Python and type 'import threading' to see
+if it raises an error.</td>
   </tr>
 </table>
