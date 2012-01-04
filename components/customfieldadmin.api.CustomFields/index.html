@@ -1,0 +1,37 @@
+---
+layout: main
+title: customfieldadmin.api.CustomFields
+---
+<h1 class="name">customfieldadmin.api.CustomFields</h1>
+<h2 class="package">In package <a href="packages/TracCustomFieldAdmin/index.html">TracCustomFieldAdmin</a></h2>
+
+<pre class="doc">These methods should be part of TicketSystem API/Data Model.
+Adds update_custom_field and delete_custom_field methods.
+(The get_custom_fields is already part of the API - just redirect here,
+ and add option to only get one named field back.)
+
+Input to methods is a 'customfield' dict supporting these keys:
+    name = name of field (alphanumeric only)
+    type = text|checkbox|select|radio|textarea
+    label = label description
+    value = default value for field content
+    options = options for select and radio types (list, leave first empty for optional)
+    cols = number of columns for text area
+    rows = number of rows for text area
+    order = specify sort order for field
+    format = text|wiki (for text and textarea)</pre>
+
+<h2>Implements:</h2>
+<ul>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
+  </thead>
+</table>

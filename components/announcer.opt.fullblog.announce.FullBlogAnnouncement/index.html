@@ -1,0 +1,36 @@
+---
+layout: main
+title: announcer.opt.fullblog.announce.FullBlogAnnouncement
+---
+<h1 class="name">announcer.opt.fullblog.announce.FullBlogAnnouncement</h1>
+<h2 class="package">In package <a href="packages/TracAnnouncer/index.html">TracAnnouncer</a></h2>
+
+<pre class="doc">Send announcements on blog events.</pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/tracfullblog.api.IBlogChangeListener/index.html">tracfullblog.api.IBlogChangeListener</a></li>
+  <li><a href="interfaces/announcer.api.IAnnouncementFormatter/index.html">announcer.api.IAnnouncementFormatter</a></li>
+  <li><a href="interfaces/announcer.distributors.mail.IAnnouncementEmailDecorator/index.html">announcer.distributors.mail.IAnnouncementEmailDecorator</a></li>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
+  </thead>
+  <tr>
+    <td>fullblog-announcement</td>
+    <td>blog_email_subject</td>
+    <td>Option</td>
+    <td>Blog: ${blog.name} ${action}</td>
+    <td>Format string for the blog email subject.
+
+This is a mini genshi template and it is passed the blog_post and
+action objects.</td>
+  </tr>
+</table>

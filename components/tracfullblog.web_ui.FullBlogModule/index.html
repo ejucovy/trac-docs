@@ -1,0 +1,55 @@
+---
+layout: main
+title: tracfullblog.web_ui.FullBlogModule
+---
+<h1 class="name">tracfullblog.web_ui.FullBlogModule</h1>
+<h2 class="package">In package <a href="packages/TracFullBlogPlugin/index.html">TracFullBlogPlugin</a></h2>
+
+<pre class="doc"></pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/trac.web.api.IRequestHandler/index.html">trac.web.api.IRequestHandler</a></li>
+  <li><a href="interfaces/trac.web.chrome.INavigationContributor/index.html">trac.web.chrome.INavigationContributor</a></li>
+  <li><a href="interfaces/trac.search.api.ISearchSource/index.html">trac.search.api.ISearchSource</a></li>
+  <li><a href="interfaces/trac.timeline.api.ITimelineEventProvider/index.html">trac.timeline.api.ITimelineEventProvider</a></li>
+  <li><a href="interfaces/trac.web.chrome.ITemplateProvider/index.html">trac.web.chrome.ITemplateProvider</a></li>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
+  </thead>
+  <tr>
+    <td>fullblog</td>
+    <td>month_names</td>
+    <td>ListOption</td>
+    <td></td>
+    <td>Ability to specify a list of month names for display in groupings.
+If empty it will make a list from default locale setting.
+Enter list of 12 months like:
+`month_names = January, February, ..., December` </td>
+  </tr>
+  <tr>
+    <td>fullblog</td>
+    <td>num_items_front</td>
+    <td>IntOption</td>
+    <td>20</td>
+    <td>Option to specify how many recent posts to display on the
+front page of the Blog (and RSS feeds).</td>
+  </tr>
+  <tr>
+    <td>fullblog</td>
+    <td>personal_blog</td>
+    <td>BoolOption</td>
+    <td>False</td>
+    <td>When using the Blog as a personal blog (only one author), setting to 'True'
+will disable the display of 'Browse by author:' in sidebar, and also removes
+various author links and references. </td>
+  </tr>
+</table>

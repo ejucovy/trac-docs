@@ -1,0 +1,53 @@
+---
+layout: main
+title: TracFullBlogPlugin
+---
+<h1 class="name">TracFullBlogPlugin</h1>
+<pre class="doc">Full-featured and self-contained Blog plugin for Trac.</pre>
+
+<h2>Interfaces Declared:</h2>
+<ul>
+  <li><a href="interfaces/tracfullblog.api.IBlogChangeListener/index.html">tracfullblog.api.IBlogChangeListener</a></li>
+  <li><a href="interfaces/tracfullblog.api.IBlogManipulator/index.html">tracfullblog.api.IBlogManipulator</a></li>
+</ul>
+<h2>Components Provided:</h2>
+<ul>
+  <li><a href="components/tracfullblog.core.FullBlogCore/index.html">tracfullblog.core.FullBlogCore</a></li>
+  <li><a href="components/tracfullblog.admin.FullBlogAdminPanel/index.html">tracfullblog.admin.FullBlogAdminPanel</a></li>
+  <li><a href="components/tracfullblog.db.FullBlogSetup/index.html">tracfullblog.db.FullBlogSetup</a></li>
+  <li><a href="components/tracfullblog.tags.FullBlogTagSystem/index.html">tracfullblog.tags.FullBlogTagSystem</a></li>
+  <li><a href="components/tracfullblog.web_ui.FullBlogModule/index.html">tracfullblog.web_ui.FullBlogModule</a></li>
+</ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'author': 'CodeResort.com = BV Network AS',
+ 'author_email': 'simon-code@bvnetwork.no',
+ 'description': 'Full-featured and self-contained Blog plugin for Trac.',
+ 'entry_points': {'trac.plugins': ['tracfullblog.admin = tracfullblog.admin',
+                                   'tracfullblog.core = tracfullblog.core',
+                                   'tracfullblog.db = tracfullblog.db',
+                                   'tracfullblog.macros = tracfullblog.macros',
+                                   'tracfullblog.spamfilter = tracfullblog.spamfilter[spamfilter]',
+                                   'tracfullblog.tags = tracfullblog.tags[tags]',
+                                   'tracfullblog.web_ui = tracfullblog.web_ui']},
+ 'exclude_package_data': {'': ['tests/*']},
+ 'extras_require': {'spamfilter': 'TracSpamFilter&gt;=0.2',
+                    'tags': 'TracTags&gt;=0.6'},
+ 'install_requires': [],
+ 'keywords': 'trac blog',
+ 'license': 'BSD',
+ 'name': 'TracFullBlogPlugin',
+ 'package_data': {'tracfullblog': ['htdocs/*.png',
+                                   'htdocs/css/*.css',
+                                   'htdocs/js/*.js',
+                                   'templates/*.html',
+                                   'templates/*.rss']},
+ 'packages': ['tracfullblog'],
+ 'test_suite': 'tracfullblog.tests.test_suite',
+ 'tests_require': [],
+ 'url': 'http://trac-hacks.org/wiki/FullBlogPlugin',
+ 'version': '0.1.1',
+ 'zip_safe': False}
+</pre>
+

@@ -1,0 +1,36 @@
+---
+layout: main
+title: TracCustomFieldAdmin
+---
+<h1 class="name">TracCustomFieldAdmin</h1>
+<pre class="doc">Admin panel for managing Trac ticket custom fields.</pre>
+
+<h2>Interfaces Declared:</h2>
+<ul>
+</ul>
+<h2>Components Provided:</h2>
+<ul>
+  <li><a href="components/customfieldadmin.api.CustomFields/index.html">customfieldadmin.api.CustomFields</a></li>
+  <li><a href="components/customfieldadmin.customfieldadmin.CustomFieldAdminPage/index.html">customfieldadmin.customfieldadmin.CustomFieldAdminPage</a></li>
+</ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'author': 'CodeResort.com &amp; Optaros.com',
+ 'description': 'Admin panel for managing Trac ticket custom fields.',
+ 'entry_points': {'trac.plugins': ['customfieldadmin.api = customfieldadmin.api',
+                                   'customfieldadmin.customfieldadmin = customfieldadmin.customfieldadmin']},
+ 'exclude_package_data': {'': ['tests/*']},
+ 'install_requires': [],
+ 'license': 'BSD',
+ 'name': 'TracCustomFieldAdmin',
+ 'package_data': {'customfieldadmin': ['htdocs/css/*.css',
+                                       'htdocs/js/*.js',
+                                       'templates/*.html']},
+ 'packages': ['customfieldadmin'],
+ 'test_suite': 'customfieldadmin.tests.test_suite',
+ 'tests_require': [],
+ 'url': 'http://trac-hacks.org/wiki/CustomFieldAdminPlugin',
+ 'version': '0.2.6'}
+</pre>
+

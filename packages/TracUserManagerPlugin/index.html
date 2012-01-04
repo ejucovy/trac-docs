@@ -1,0 +1,57 @@
+---
+layout: main
+title: TracUserManagerPlugin
+---
+<h1 class="name">TracUserManagerPlugin</h1>
+<pre class="doc">Trac User Manager</pre>
+
+<h2>Interfaces Declared:</h2>
+<ul>
+  <li><a href="interfaces/tracusermanager.api.IUserAttributeChangeListener/index.html">tracusermanager.api.IUserAttributeChangeListener</a></li>
+  <li><a href="interfaces/tracusermanager.api.IUserStore/index.html">tracusermanager.api.IUserStore</a></li>
+  <li><a href="interfaces/tracusermanager.api.IAttributeProvider/index.html">tracusermanager.api.IAttributeProvider</a></li>
+  <li><a href="interfaces/tracusermanager.admin.IUserManagerPanelProvider/index.html">tracusermanager.admin.IUserManagerPanelProvider</a></li>
+  <li><a href="interfaces/tracusermanager.admin.IUserListCellContributor/index.html">tracusermanager.admin.IUserListCellContributor</a></li>
+  <li><a href="interfaces/tracusermanager.profile.api.IUserProfilesListMacroCellContributor/index.html">tracusermanager.profile.api.IUserProfilesListMacroCellContributor</a></li>
+</ul>
+<h2>Components Provided:</h2>
+<ul>
+  <li><a href="components/tracusermanager.api.UserManager/index.html">tracusermanager.api.UserManager</a></li>
+  <li><a href="components/tracusermanager.api.SessionUserStore/index.html">tracusermanager.api.SessionUserStore</a></li>
+  <li><a href="components/tracusermanager.api.SessionAttributeProvider/index.html">tracusermanager.api.SessionAttributeProvider</a></li>
+  <li><a href="components/tracusermanager.api.EnvironmentFixKnownUsers/index.html">tracusermanager.api.EnvironmentFixKnownUsers</a></li>
+  <li><a href="components/tracusermanager.admin.UserManagementAdminPage/index.html">tracusermanager.admin.UserManagementAdminPage</a></li>
+  <li><a href="components/tracusermanager.account.admin_um.AccountUserManagerPanel/index.html">tracusermanager.account.admin_um.AccountUserManagerPanel</a></li>
+  <li><a href="components/tracusermanager.permissions.admin_um.PermissionUserManagerPanel/index.html">tracusermanager.permissions.admin_um.PermissionUserManagerPanel</a></li>
+  <li><a href="components/tracusermanager.profile.api.UserProfileManager/index.html">tracusermanager.profile.api.UserProfileManager</a></li>
+  <li><a href="components/tracusermanager.profile.admin_um.UserProfileUserManagerPanel/index.html">tracusermanager.profile.admin_um.UserProfileUserManagerPanel</a></li>
+  <li><a href="components/tracusermanager.profile.admin.UserProfileFieldsAdminPage/index.html">tracusermanager.profile.admin.UserProfileFieldsAdminPage</a></li>
+  <li><a href="components/tracusermanager.profile.macros.DefaultUserProfilesListCellContributor/index.html">tracusermanager.profile.macros.DefaultUserProfilesListCellContributor</a></li>
+  <li><a href="components/tracusermanager.profile.prefs.UserProfileModule/index.html">tracusermanager.profile.prefs.UserProfileModule</a></li>
+</ul>
+
+<h2>Package Metadata:</h2>
+<pre class="metadata">
+{'author': 'Catalin Balan',
+ 'author_email': 'cbalan@optaros.com',
+ 'description': 'Trac User Manager',
+ 'entry_points': {'trac.plugins': ['tracusermanager.api = tracusermanager.api',
+                                   'tracusermanager.admin = tracusermanager.admin',
+                                   'tracusermanager.account = tracusermanager.account',
+                                   'tracusermanager.permissions = tracusermanager.permissions',
+                                   'tracusermanager.profile = tracusermanager.profile']},
+ 'license': 'BSD',
+ 'name': 'TracUserManagerPlugin',
+ 'package_data': {'tracusermanager': ['htdocs/js/*.js',
+                                      'htdocs/css/*.css',
+                                      'templates/*.html',
+                                      'htdocs/img/*.png']},
+ 'packages': ['tracusermanager',
+              'tracusermanager.account',
+              'tracusermanager.permissions',
+              'tracusermanager.profile'],
+ 'test_suite': 'tracusermanager.tests',
+ 'url': 'http://code.optaros.com/trac/oforge',
+ 'version': '0.4'}
+</pre>
+

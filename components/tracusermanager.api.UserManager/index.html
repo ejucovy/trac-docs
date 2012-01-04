@@ -1,0 +1,43 @@
+---
+layout: main
+title: tracusermanager.api.UserManager
+---
+<h1 class="name">tracusermanager.api.UserManager</h1>
+<h2 class="package">In package <a href="packages/TracUserManagerPlugin/index.html">TracUserManagerPlugin</a></h2>
+
+<pre class="doc"></pre>
+
+<h2>Implements:</h2>
+<ul>
+  <li><a href="interfaces/trac.web.chrome.ITemplateProvider/index.html">trac.web.chrome.ITemplateProvider</a></li>
+</ul>
+
+<h2>Contains via Extension Points:</h2>
+<ul>
+  <li><a href="interfaces/tracusermanager.api.IAttributeProvider/index.html">tracusermanager.api.IAttributeProvider</a></li>
+  <li><a href="interfaces/tracusermanager.api.IUserAttributeChangeListener/index.html">tracusermanager.api.IUserAttributeChangeListener</a></li>
+  <li><a href="interfaces/tracusermanager.api.IUserStore/index.html">tracusermanager.api.IUserStore</a></li>
+</ul>
+
+<h2>Options:</h2>
+<table>
+  <thead>
+    <tr><th>Section</th><th>Name</th><th>Type</th><th>Default</th><th>Docs</th></tr>
+  </thead>
+  <tr>
+    <td>user_manager</td>
+    <td>attribute_provider</td>
+    <td>ExtensionOption</td>
+    <td>SessionAttributeProvider</td>
+    <td>Name of the component implementing `IAttributeProvider`, which is used
+for storing user attributes</td>
+  </tr>
+  <tr>
+    <td>user_manager</td>
+    <td>user_store</td>
+    <td>ExtensionOption</td>
+    <td>SessionUserStore</td>
+    <td>Name of the component implementing `IUserStore`, which is used
+for storing project's team</td>
+  </tr>
+</table>
